@@ -1,0 +1,50 @@
+
+import {
+  Canvas,
+  Controls,
+  Description,
+  Meta,
+  Subtitle,
+  Story,
+} from '@storybook/blocks';
+
+import * as ButtonStories from './Button.stories.js';
+
+# Button
+
+<Meta of={ButtonStories} />
+
+<Subtitle>Displays a default button for organization. THIS FILE IS EXAMPLE</Subtitle>
+
+Use an Button for attributing actions or content to specific users.
+
+The user's name should _always_ be present when using Button – either printed beside the Button or in a tooltip.
+
+<Canvas>
+  <Story of={ButtonStories.Primary} />
+</Canvas>
+
+## Additional variants
+
+### Sizes
+
+<Description of={ButtonStories.Secondary} />
+
+<Story of={ButtonStories.Secondary} />
+
+### WithInteractions
+
+<Description of={ButtonStories.WithInteractions} />
+
+<Story of={ButtonStories.WithInteractions} />
+
+
+### Playground
+
+Interact with the component and see how it responds to the different input properties.
+
+<Canvas>
+  <Story of={ButtonStories.Controls} />
+</Canvas>
+
+<Controls of={ButtonStories.Controls} />
