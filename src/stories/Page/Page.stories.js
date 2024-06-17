@@ -1,9 +1,9 @@
 import { within, userEvent, expect } from '@storybook/test';
-import MyPage from './Page.vue';
+import Page from './Page.vue';
 
 export default {
   title: 'Example/Page',
-  component: MyPage,
+  component: Page,
   parameters: {
     // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout
     layout: 'fullscreen',
@@ -16,9 +16,9 @@ export const LoggedOut = {};
 export const LoggedIn = {
   render: () => ({
     components: {
-      MyPage,
+      Page,
     },
-    template: '<my-page />',
+    template: '<page />',
   }),
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);

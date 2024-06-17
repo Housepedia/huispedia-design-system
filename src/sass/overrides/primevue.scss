@@ -1,0 +1,76 @@
+@import '../abstracts/hp-colors';
+/**
+  * 1. Inputs
+ **/
+
+.p-inputtext {
+  font-family: 'Poppins', sans-serif;
+  border: 1px solid $color-grey-100;
+  border-radius: .25rem;
+
+  &:focus {
+    border-color: var(--color-tertiary);
+  }
+}
+
+/**
+ * 2. Component
+ **/
+.p-component {
+  font-family: 'Poppins', sans-serif;
+}
+
+
+
+.p-toast {
+  .p-toast-message {
+
+    .p-toast-message-content {
+      display: flex;
+      gap: .5rem;
+
+
+      .p-toast-summary {
+        width: 100%;
+      }
+    }
+
+    &.p-toast-message-success {
+      background: #fff;
+      border-color: $color-success;
+    }
+
+    .p-toast-icon-close {
+      border: 0;
+      font-family: "Font Awesome 5 Pro";
+
+      &:before {
+        content: '\f00d';
+      }
+    }
+  }
+}
+
+.p-password {
+
+  &.p-input-icon-right > i {
+    margin-top: 1px;
+  }
+
+  .fa-eye,
+  .fa-eye-slash {
+    padding: .75rem;
+
+    display: block;
+  }
+
+  input {
+
+    &:enabled:hover {
+      border-color: var(--color-grey-200);
+    }
+    &:enabled:focus {
+      border-color: var(--color-grey-400);
+    }
+  }
+}

@@ -1,0 +1,240 @@
+// Tags
+body.modal-open{
+  overflow-y: scroll;
+  padding-right: 0!important;
+}
+.select-tag-container{
+  .tag, .empty-tag{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    max-width: 400px;
+    overflow: hidden;
+    height:150px;
+    border-radius: 10px;
+  }
+  .tag{
+    z-index: 1;
+    img{
+      position: absolute;
+      display: block;
+      object-fit: cover;
+      width: 100%;
+      height:100%;
+      z-index: 1;
+      transition: all 0.2s;
+    }
+    &:after{
+      position: absolute;
+      content: '';
+      top:0;right:0;left:0;bottom:0;
+      background: rgba(33, 33, 33, 0.48);
+      z-index: 2;
+    }
+    > span{
+      position: relative;
+      z-index: 5;
+      display: block;
+      padding:0 10px;
+      color:#fff;
+      font-size: 1.2rem;
+      font-weight: 600;
+      text-align: center;
+      text-shadow: 0 1px 2px rgba(0,0,0,.4);
+    }
+    .controls{
+      position: absolute;
+      top:0;
+      width: 100%;
+      text-align: right;
+      right:0;
+      z-index: 10;
+      transition: opacity 0.2s;
+      opacity: 0;
+      span {
+       width: 30px;
+       height:30px;
+       background: rgba(0,0,0,0.4);
+       color:#fff;
+       text-align: center;
+       line-height: 30px;
+       font-size: 12px;
+       border-radius: 50%;
+       display: inline-block;
+       margin:8px 8px 0 0;
+       cursor: pointer;
+        i{
+          pointer-events: none;
+        }
+        &:hover{
+          color: var(--color-primary);
+        }
+     }
+    }
+    &:hover{
+      background: #DDD;
+      cursor: pointer;
+      img{
+        filter: blur(0);
+      }
+      &:after {
+        background: rgba(145, 66, 73, 0.35);
+      }
+      .controls{
+        opacity: 1;
+      }
+    }
+  }
+  .empty-tag{
+    display: none;
+    border:2px dashed #bbb;
+    padding:10px;
+    cursor: pointer;
+    transition: all 0.2s;
+    &:hover{
+      background: #eee;
+    }
+    span{
+      display: inline-block;
+      color: var(--color-grey-400);
+      font-size: 1.2rem;
+
+    }
+  }
+  &.empty{
+    .tag{display: none}
+    .empty-tag{
+      display: flex;
+    }
+  }
+}
+#tagsModal{
+  .modal-dialog{
+    max-width: 1040px;
+    .modal-body{
+      max-height: 80vh;
+      overflow: auto;
+    }
+  }
+  #tags-container{
+  .card {
+    .card-header{
+      padding:0;
+      border:0;
+      background: none;
+      h5{
+        text-align: left;
+        font-weight: 400;
+        font-size: 1.1rem;
+      }
+      margin-top:20px;
+
+    }
+    &:first-child{
+      .card-header {
+        margin-top: 0;
+      }
+    }
+    .card-body{
+      padding:0;
+      overflow: auto;
+      .tag{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width:160px;
+        overflow: hidden;
+        height:100px;
+        border-radius: 8px;
+        margin:0 4px 4px 0;
+        float:left;
+        z-index: 1;
+        img{
+          position: absolute;
+          display: block;
+          object-fit: cover;
+          width: 100%;
+          height:100%;
+          z-index: 1;
+          transition: all 0.2s;
+          filter: blur(1px);
+        }
+        &:after{
+          position: absolute;
+          content: '';
+          top:0;right:0;left:0;bottom:0;
+          background: rgba(0,0,0, 0.45);
+          z-index: 2;
+          border-radius: 8px;
+          border:2px solid transparent;
+        }
+        span{
+          position: relative;
+          z-index: 5;
+          display: block;
+          padding:0 10px;
+          color:#fff;
+          font-size: 1.1rem;
+          font-weight: 600;
+          text-align: center;
+          text-shadow: 0 1px 2px rgba(0,0,0,.4);
+        }
+        &:hover{
+            background: #DDD;
+            cursor: pointer;
+            &:after{
+              border:4px solid var(--color-primary);
+            }
+        }
+        &.active, &.active:hover{
+          color:#fff;
+          cursor: default;
+          &:after{
+            border:4px solid var(--color-primary);
+          }
+        }
+      }
+    }
+  }
+}
+}
+
+@media (max-width: 767px) {
+
+  .select-tag-container{
+    max-width: 280px;
+    margin:0 auto;
+    .tag{
+      .controls {
+        opacity: 1;
+      }
+    }
+  }
+  #tagsModal{
+    .modal-dialog {
+      top: 0;
+      position: absolute;
+      right: 0;
+      margin: 0;
+      .modal-content{
+        border-radius: 0;
+      }
+      .modal-body{
+        max-height: none;
+      }
+
+    }
+    #tags-container{
+      .card {
+        .card-body{
+          .tag{
+            width: 48%;
+          }
+        }
+      }
+    }
+  }
+}

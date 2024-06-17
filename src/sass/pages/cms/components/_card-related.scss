@@ -1,0 +1,134 @@
+.hp-card-related {
+  text-decoration: none;
+  display: block;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  border-bottom: 1px solid var(--color-grey-200);
+  padding-bottom: 2rem;
+
+  &:last-child {
+    border-bottom: 0px solid var(--color-grey-200);
+    padding-bottom: 0;
+  }
+
+  figure {
+    overflow: hidden;
+    margin: 0;
+    background: var(--color-slate-100);
+    flex-shrink: 0;
+    border-radius: .5rem;
+  }
+
+  img {
+    height: 90px;
+    width: 120px;
+    flex-grow: 1;
+    transition: ease .4s transform;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .hp-title {
+    font-size: 1rem;
+    line-height: 1.3;
+    font-weight: 500;
+    -webkit-box-orient: vertical;
+    display: block;
+    display: -webkit-box;
+    overflow: hidden !important;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+    margin-bottom: .5rem;
+    transition: ease .4s color;
+  }
+
+  p {
+    margin-bottom: 1.25rem;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    display: none;
+    overflow: hidden !important;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+    font-size: 14px;
+  }
+
+  .hp-time {
+    display: flex;
+    gap: .5rem;
+    color: var(--color-grey-600);
+
+    font-size: 14px;
+
+    i {
+      margin-top: .25rem;
+    }
+  }
+
+  &:hover {
+    text-decoration: none;
+    color: var(--color-grey-800);
+
+    .hp-title-h4,
+    .hp-title {
+      color: var(--color-primary);
+    }
+     
+    img {
+      transform: scale(1.03);
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .hp-card-related {
+    flex-direction: column;
+
+    gap: 0;
+    border-bottom: 0px solid var(--color-grey-200);
+    padding-bottom: 0;
+
+
+    &-content {
+
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    figure {
+      aspect-ratio: 35 / 23;
+      width: 100%;
+      margin-bottom: 1.25rem;
+    }
+
+    img {
+      height: 100%;
+      width: 100%;
+    }
+
+    .hp-time {
+      order: 1;
+      margin-bottom: 1.25rem;
+    }
+
+    p {
+      font-size: 0.938rem;
+      display: -webkit-box;
+      order: 3;
+      -webkit-line-clamp: 3;
+    }
+
+    .hp-title {
+      font-size: 1.125rem;
+      overflow: visible;
+      text-overflow: unset;
+      -webkit-line-clamp: 5;
+      line-height: 1.3;
+      margin-bottom: 1rem;
+      order: 2;
+    }
+  }
+}

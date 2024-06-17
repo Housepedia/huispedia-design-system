@@ -1,0 +1,307 @@
+.hp-swiper-pagination-kp {
+
+  .swiper-pagination-bullet-active {
+    background: var(--color-kp);
+  }
+}
+
+// Vergelijkbare woningen tabel
+.hp-comparable-grid {
+  border: 1px solid var(--color-grey-200);
+  border-radius: .5rem;
+  font-size: 14px;
+  display: flex;
+  width: 100%;
+
+
+  .hp-results {
+  position: relative;
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-snap-stop: always;
+  flex-grow: 1;
+  }
+
+  img {
+    flex-shrink: 0;
+    border-radius: 0.375rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .hp-column {
+    display:flex;
+    flex-direction: column;
+    justify-content: start;
+    min-width: 200px;
+    flex-grow: 1;
+
+    > *:last-child {
+      background: var(--color-kp-10);
+    }
+  }
+
+  .hp-legend {
+    background: var(--color-slate-100);
+    max-width: 142px;
+    border-radius: .5rem 0 0 .5rem;
+    position: sticky;
+    left: 0;
+    min-width: 142px;
+
+    &:after {
+      content: '';
+      width: 100%;
+    }
+
+
+
+    > * {
+      padding: .5rem 1rem;
+    }
+
+    span {
+      font-weight: 500;
+    }
+
+    @media (min-width: 768px) {
+      min-width: 220px;
+    }
+  }
+
+.hp-column,
+.hp-legend {
+    border-right: 1px solid var(--color-grey-200);
+    > * {
+      padding: .5rem;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start;
+      scroll-snap-align: start;
+      height: 56px;
+      overflow: hidden;
+      > a {
+        display: flex;
+      }
+    }
+
+    > *:not(:last-child) {
+      border-bottom: 1px solid var(--color-grey-200);
+    }
+
+    > :nth-child(1) {
+      gap: .5rem;
+    }
+
+    &:last-child {
+      border-right: 0;
+    }
+  }
+}
+
+// Huispedia Plus bid advise title
+.hp-kp-bid-advise-title {
+  border-radius: .5rem;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--color-kp);
+  border-left-width: 7px;
+  max-width: 350px;
+  align-items: flex-start;
+  position: relative;
+  transition: all 0.2s;
+  background:linear-gradient(270deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 100%);
+  svg.chevron{
+    position: absolute;
+    top:50%;
+    right:1rem;
+    transition: transform 0.2s;
+    transform: translate(0,-50%);
+  }
+  &:hover{
+    cursor: pointer;
+    background:linear-gradient(270deg, rgba(255,255,255,1) 0%, rgba(111,115,210,0.1) 100%);
+    svg.chevron{
+      transform: translate(3px,-50%);
+    }
+  }
+}
+
+// HuispediaPlus note
+.hp-kp-note {
+  border-radius: .5rem;
+  padding: 0.75rem;
+  border: 1px solid var(--color-kp);
+  border-left-width: 4px;
+  font-size:0.875rem;
+  background: #fff;
+  strong {
+    font-weight: 500;
+  }
+  > i{
+    color: var(--color-kp);
+    display: none;
+  }
+}
+.hp-kp-warning{
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  border-radius: .5rem;
+  background: #FEF7E5;
+  max-width: 680px;
+  font-size:0.875rem;
+  > i {
+    color: #F9AF00;
+    font-size: 21px;
+    flex-shrink: 0;
+  }
+}
+@media(min-width: 768px) {
+  .hp-kp-note, .hp-kp-warning {
+    flex-direction: row;
+    border-radius: .5rem;
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+    > i{
+      display: inline-block;
+      font-size: 21px;
+      flex-shrink: 0;
+    }
+  }
+}
+
+.hp-history-timeline {
+  border-bottom: 1px solid var(--color-grey-200);
+  font-size: 14px;
+}
+.hp-history-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas: "A B C" "D D D";
+  gap: .5rem;
+  border-bottom: 1px;
+  border-top: 1px solid var(--color-grey-200);
+  padding: .75rem 0;
+
+  &:not(:first-child) {
+    min-height: 96px;
+  }
+
+
+  > *:nth-child(3) {
+    text-align: right;
+  }
+
+  > *:nth-child(4) {
+    align-items: flex-end;
+    display: flex;
+  }
+
+  a {
+    color: var(--color-grey-600);
+  }
+}
+
+[class*="hp-kp-label"] {
+  border: 1px solid rgba(#6F73D2, 0.5);
+  background: var(--color-kp-5);
+  border-radius: .25rem;
+  padding: .125rem .5rem;
+  gap: .25rem;
+  font-size: .75rem;
+  color: var(--color-kp);
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+
+  i {
+    color: #6F73D2;
+    cursor: pointer;
+  }
+}
+.hp-kp-label-white {
+  background: #fff;
+  border: 1px solid var(--color-kp);
+  color: var(--color-kp);
+  i {
+    color: var(--color-kp);
+  }
+}
+.hp-kp-label-blue {
+  background: rgba(#4c6ef5, 0.1);
+  border: 1px solid rgba(#4c6ef5, 0.5);
+  color: var(--color-tertiary);
+  i {
+    color: var(--color-tertiary);
+  }
+}
+
+.hp-kp-label-orange {
+  background: rgba(#EA580C, 0.1);
+  border: 1px solid rgba(#EA580C, 0.5);
+  color: #EA580C;
+
+  i {
+    color: #EA580C;
+  }
+}
+
+.hp-kp-label-yellow {
+  background: rgba(#F9AF00, 0.1);
+  border: 1px solid rgba(#F9AF00, 0.5);
+  color: #F9AF00;
+
+  i {
+    color: #F9AF00;
+  }
+}
+@media (min-width: 992px) {
+  .hp-history-row {
+    grid-template-columns: 1fr 1fr 150px;
+
+    > *:nth-child(3) {
+      text-align: left;
+    }
+  }
+}
+
+.hp-modal-non-hpp {
+  font-size: 0.9375rem;
+}
+
+
+@media (min-width: 768px) {
+  .hp-modal-non-hpp {
+
+    .hp-modal-dialog {
+      margin: 0;
+      height: 100%;
+      max-height: 100%;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .hp-modal-non-hpp {
+
+    .hp-modal-dialog {
+      margin: 1.5rem;
+      height: 100%;
+      max-height: 700px;
+    }
+  }
+
+  .hp-modal-hpp {
+
+    .hp-modal-dialog {
+      margin: 1rem;
+    }
+  }
+}

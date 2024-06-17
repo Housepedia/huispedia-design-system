@@ -1,0 +1,240 @@
+#navbar{
+  font-size: 1rem;
+  background: #FFF;
+  border-bottom:1px solid #e9ecf1;
+  padding: 0 15px;
+  height: 74px;
+  z-index: 1500;
+  &.shadow-nav{
+    border-bottom-color: transparent;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075)
+  }
+  &.navbar-no-border{
+    border-bottom: none;
+  }
+  .navbar-brand{
+    padding: 0 15px;
+    position: relative;
+    margin-right:0;
+    img.huispedia-logo{
+      margin: 5px 0;
+      height: 30px;
+      width: 150px;
+      object-fit: contain;
+      display: inline-block;
+    }
+    img.huispedia-logo-small{
+      margin: 5px 0;
+      height: 26px;
+      width: 26px;
+      object-fit: contain;
+      display: none;
+    }
+  }
+  span.nav-link,
+  a.nav-link{
+    color: var(--color-grey-800);
+    font-size: 14px;
+    font-weight: 500;
+    padding: 0.5rem 0.7rem;
+    white-space: nowrap;
+    text-decoration: none;
+    &.active{
+      color: var(--color-primary);
+    }
+    &:hover{
+      color: var(--color-primary);
+      text-decoration: none;
+    }
+  }
+  .account-picture {
+    height: 32px;
+    width: 32px;
+    border-radius: 50%;
+    background-color: var(--color-slate-100);
+    box-shadow: 0 0 0 2px #DBDBDB;
+    object-fit: cover;
+    overflow: hidden;
+    display: block;
+    margin:4px 16px 0 10px;
+  }
+  ul.dropdown-account{
+    li.main-menu-item {
+      position: relative;
+      min-width: 200px;
+      display: block;
+      color: rgba(0,0,0,0.87);
+      line-height: 21px;
+      letter-spacing: 0;
+      a{
+        text-align: left;
+        display: block;
+        line-height: 26px;
+        color: var(--color-grey-800);
+        padding: 4px 20px;
+        margin: 0;
+        font-size:14px;
+        text-decoration: none;
+        &:hover{
+          background:#f5f8fa;
+          color: #5e7ce2;
+        }
+      }
+    }
+    hr{
+      margin-top: 5px;
+      margin-bottom: 5px;
+      border: 0;
+      border-top: 1px solid #eee;
+    }
+  }
+  .dropdown-menu{
+    left: auto;
+    right: 0;
+    padding:0;
+    border:none;
+    margin:0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  }
+  .dropdown-toggle::after{
+    display: none;
+  }
+  #mobileMenuContainer{
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  body.fixed-mobile-navbar {
+    padding-top: 55px;
+    #navbar {
+      height: 55px;
+      position: fixed;
+      border-bottom: 1px solid #DBDBDB;
+      top: 0;
+      right: 0;
+      left: 0;
+    }
+  }
+  body.menu-open, body.search-pop-out-open{
+    overflow:hidden;
+  }
+  #navbar {
+    padding: 0 0.2rem;
+    height:56px;
+    .navbar-toggler {
+      font-size: 1rem;
+      border-radius: 0;
+      border:none;
+    }
+    a.nav-link, a.dropdown-item {
+      padding: 0.8rem 0rem;
+      color: #fff;
+    }
+    .navbar-brand {
+      text-align: center;
+      img.huispedia-logo {
+        height: 26px;
+      }
+    }
+    #navbarSearchButton {
+      padding:0;
+      width: 44px;
+      line-height: 54px;
+      text-align: center;
+      border:none;
+      svg{
+        fill:#666;
+        width: 1.1rem;
+        height: 1.1rem;
+      }
+    }
+    #mobileMenuBackdrop{
+      position: fixed;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1100;
+      transition: left 0s cubic-bezier(0.23, 1, 0.32, 1) 0.4s, background-color 0.4s cubic-bezier(0.23, 1, 0.32, 1) 0s;
+      left: -100%;
+      background-color: rgba(7, 7, 7, 0);
+      &.active{
+        left: 0;
+        background-color: rgba(7, 7, 7, 0.4);
+        transition: left 0s cubic-bezier(0.23, 1, 0.32, 1) 0s, background-color 0.4s cubic-bezier(0.23, 1, 0.32, 1) 0s;
+      }
+    }
+    #mobileMenuContainer{
+      position: fixed;
+      display: block;
+      top: 0;
+      left: 0;
+      bottom:0;
+      width: 100%;
+      max-width: 320px;
+      z-index: 1200;
+      overflow: auto;
+      background: #fff;
+      transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0s;
+      transform: translate3d(-100%, 0px, 0px);
+      &.active{
+        transform: translate3d(0px, 0px, 0px);
+      }
+      #mobileNavHeader{
+        display: flex;
+        flex: 0 0 auto;
+        > div{
+          flex: 1 1 0%;
+          padding: 22px 0 0 24px;
+        }
+        button{
+          margin: 14px ;
+          padding: 0;
+          width: 44px;
+          line-height: 44px;
+          color: rgb(16, 16, 16);
+          background: none;
+          border: 0;
+          border-radius: 22px;
+          -webkit-tap-highlight-color: transparent;
+          cursor: pointer;
+          svg{
+            width: 1.6rem;
+            height:1.6rem;
+            fill:#25315a;
+          }
+        }
+      }
+      nav{
+        display: flex;
+        flex-direction: column;
+        ul{
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+          overflow-y: auto;
+          li{
+            list-style-type: none;
+            a.menu-item {
+              position: relative;
+              display: block;
+              margin: 8px 0;
+              padding: 8px 24px;
+              font-weight: 400;
+              font-size: 1rem;
+              line-height: 28px;
+              color: var(--color-grey-800);
+              overflow: hidden;
+              text-overflow: ellipsis;
+              white-space: nowrap;
+              user-select: none;
+              -webkit-tap-highlight-color: transparent;
+              cursor: pointer;
+              text-decoration: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}

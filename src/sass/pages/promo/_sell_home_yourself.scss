@@ -1,0 +1,180 @@
+main.promo_sell_home_yourself{
+  background: #fff;
+  .promo-background{
+    background:#f8f8f8;
+  }
+  .container.container-main{
+    padding: 0 0 100px 0;
+  }
+  .promo-section-wrapper{
+    .promo-section{
+      display: flex;
+      flex-direction: column;
+      height: 350px;
+      -webkit-box-pack: end;
+      justify-content: flex-end;
+      position: relative;
+      margin-bottom: 100px;
+      padding:0;
+      .promo-image{
+        object-fit: cover;
+        width:50%;
+        min-width: 500px;
+        height: 100%;
+        position: absolute;
+        top:0;
+        right:0;
+        z-index: 1;
+        border-radius: 4px;
+      }
+      .card-holder{
+        position: absolute;
+        width: 50%;
+        height: 100%;
+        top:0;
+        left:0;
+        z-index: 2;
+        .promo-card{
+          position: absolute;
+          bottom:30px;
+          right:-65px;
+          z-index: 2;
+          box-shadow: rgba(0, 0, 0, 0.25) 0 0 25px 0;
+          text-align: left;
+          background: rgb(255, 255, 255);
+          width: 450px;
+          padding: 30px 40px;
+          border-radius: 4px;
+          span.step-number{
+            background-color: var(--color-primary);
+            color: rgb(255, 255, 255);
+            display: flex;
+            flex-direction: column;
+            height: 50px;
+            -webkit-box-pack: center;
+            justify-content: center;
+            margin-bottom: 15px;
+            text-align: center;
+            width: 50px;
+            border-radius: 50%;
+            font-size: 28px;
+            line-height: 1.3;
+            font-weight: 600;
+          }
+          h3{
+            font-size: 20px;
+            line-height: 1.5;
+            font-weight: 600;
+
+          }
+          p{
+
+          }
+        }
+        .promo-line{
+          width: 10px;
+          position: absolute;
+          bottom:0;
+          right: 310px;
+          margin-bottom:-100px;
+          height: 130px;
+          border-left:2px solid var(--color-primary);
+        }
+      }
+
+    }
+    &:last-child{
+      .promo-section{
+        margin-bottom: 0;
+      }
+    }
+
+    &.card-align-right{
+      .promo-section{
+        background-position: right 640px center;
+        .card-holder{
+          position: absolute;
+          right:0;
+          left:auto;
+          .promo-card{
+            right:auto;
+            left:-65px;
+          }
+          .promo-line{
+            right:auto;
+            left:330px;
+          }
+        }
+        .promo-image{
+          right:auto;
+          left:0;
+        }
+      }
+      .promo-line{
+        margin-left:auto;
+        margin-right:320px;
+      }
+    }
+  }
+  section.breaker{
+    margin:0 0 50px 0;
+  }
+}
+
+@media (max-width: 767px) {
+
+  header.promo_sell_home_yourself{
+
+  }
+  main.promo_sell_home_yourself{
+
+    .container.container-main{
+      padding: 0;
+      margin:0 auto;
+    }
+    .promo-section-wrapper, .promo-section-wrapper.card-align-right {
+      .promo-section {
+        padding-top:160px;
+        height:auto;
+        margin-bottom: 80px;
+        .promo-image{
+          width: 100%;
+          position: absolute;
+          min-width: 0;
+          left:auto;
+          right:auto;
+          height:220px;
+          border-radius: 0;
+        }
+        .card-holder{
+          position:relative;
+          width: auto;
+          left:auto;
+          right:auto;
+          top:auto;
+          bottom:auto;
+          padding:0 15px;
+          height:auto;
+          .promo-card{
+            width:100%;
+            position: relative;
+            left:auto;
+            right:auto;
+            bottom:0;
+          }
+          .promo-line{
+            width: 2px;
+            position: absolute;
+            bottom: -80px;
+            right: 0;
+            z-index: -2;
+            left: 0;
+            margin: 0 auto;
+            height: 80px;
+          }
+        }
+      }
+    }
+
+  }
+}

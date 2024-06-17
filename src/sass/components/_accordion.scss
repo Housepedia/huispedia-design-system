@@ -1,0 +1,366 @@
+@import '../abstracts/hp-colors';
+
+.accordion.accordion-hsp-style-1{
+  .card{
+    border:none;
+    border-radius: 10px;
+    margin-bottom: 10px;
+
+    .card-header{
+      border:none;
+      border-radius: 10px;
+      padding: 0.45rem;
+      background: var(--color-slate-100);
+      
+      button{
+          text-decoration: none !important;
+        &:after{
+          transform: rotate(180deg);
+          content: '\f107';
+          font-family: 'Font Awesome 5 Pro';
+          font-weight: 400;
+          display: inline-block;
+          transition: transform 0.2s;
+        }
+        &.collapsed{
+          &:after{
+            transform: rotate(0);
+          }
+        }
+      }
+    }
+    .card-body{
+      line-height: 1.8;
+    }
+
+  }
+}
+
+
+.hp-accordion-aside {
+
+  .card-body {
+    padding: 1.5rem;
+  }
+
+  .card {
+    border-radius: 0;
+    border: 0;
+
+    .card-header {
+      background: transparent;
+      border: 0;
+      padding: 0;
+      margin-bottom: 0;
+  
+      button {
+        background: transparent;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        font-weight: 600;
+        border: 0;
+        padding: 1rem 1.5rem;
+        background: transparent;
+        border-top: 1px solid $color-grey-100;
+        border-bottom: 1px solid $color-grey-100;
+        color: var(--color-grey-800);
+
+        i {
+          font-size: .75rem;
+          transition: ease all .3s;
+          color: $color-grey-400;
+        }
+
+        &[aria-expanded=false] i {
+          transform: rotate(0deg);
+        }
+
+        &[aria-expanded=true] i {
+          transform: rotate(180deg);
+        }
+      }
+    }
+  }
+
+  .collapse {
+    border-bottom: 1px solid $color-grey-100;
+    margin: 0;
+  }
+}
+
+.hp-accordion-plus {
+  
+  .hp-accordion-item {
+    border-bottom :1px solid var(--color-grey-200);
+  }
+
+
+  h3 {
+    text-align: left;
+    color: var(--color-grey-800);
+  }
+
+  .hp-accordion-summary {
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    background: none;
+    border: 0;
+    width: 100%;
+    padding: 2rem 0;
+    font-weight: 500;
+
+    i {
+      color: var(--color-grey-800);
+    }
+
+    &:hover {
+      color: var(--color-primary);
+    
+      i,
+      h3 {
+        color: var(--color-primary);
+      }
+    }
+
+    .fa-plus {
+      display: block;
+    }
+
+    .fa-minus {
+      display: none;
+    }
+
+    &.collapsed {
+
+      .fa-plus {
+        display: none;
+      }
+  
+      .fa-minus {
+        display: block;
+      }
+    }
+  }
+
+  .hp-accordion-details {
+
+    > * {
+      margin-bottom: 2rem;
+    }
+
+  }
+}
+
+.hp-accordion-highlighted {
+
+  &-item {
+    border-top: 1px solid var(--color-grey-200);
+    display: grid;
+
+    a {
+      font-weight: 500;
+    }
+
+    &:first-child {
+      border-top: 0;
+    }
+  }
+
+  [data-accordion-collapse] {
+    margin: 0;
+    width: auto;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: ease all .3s;
+  }
+
+  [data-accordion-summary] {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    background: none;
+    border: 0;
+    padding: 2rem 0;
+    font-size: 1.125rem;
+    font-weight: 500;
+    line-height: 1.4;
+    text-align: left;
+    color: var(--color-grey-800);
+
+    
+    small {
+      font-weight: 500;
+      margin-top: .125rem;
+    }
+
+    i {
+      margin-left: auto;
+      font-size: 13px;
+    }
+
+    .fa-chevron-right {
+      display: none;
+    }
+
+    .fa-chevron-down {
+      display: block;
+      transition: ease-out all .2s;
+      transform-origin: center;
+      margin-top: .375rem;
+      transform-origin: center center;
+    }
+  }
+
+  .active {
+    padding: 1.25rem 0;
+
+  .hp-accordion-highlighted-summary {
+      padding: 0;
+    }
+
+    .fa-chevron-down {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .hp-accordion-highlighted {
+    margin: 0 1.25rem;
+
+    &-item {
+      position: relative;
+      transition: ease padding-left 0s, ease padding-right 0s, ease padding-top .3s, ease padding-bottom .3s, ease background 0s, ease box-shadow 0s;
+    }
+
+    &.close-all-disabled {
+
+      .active {
+        background: var(--color-slate-100);
+        border-radius: .5rem;
+        border-color: transparent;
+        padding: 1.25rem;
+        margin: 0 -1.25rem;
+        transition: ease padding-top .3s, ease padding-bottom .3s, ease background .3s;
+        z-index: 1;
+
+        + .hp-accordion-highlighted-item {
+          border-top: 0px;
+        }
+
+        .hp-accordion-highlighted-summary {
+
+          + .hp-accordion-highlighted-item {
+            border-top: 1px solid transparent;
+          }
+        }
+
+        .hp-accordion-highlighted-summary:not(disabled) {
+          pointer-events: none;
+        }
+      }
+    }
+
+    [data-accordion-summary] {
+      transition: ease padding .3s;
+
+      &:hover {
+        color: var(--color-primary);
+      }
+
+      .fa-chevron-right {
+        display: block;
+        font-size: 1rem;
+        margin-top: .125rem;
+        
+      }
+  
+      .fa-chevron-down {
+        display: none;
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+
+  .hp-accordion-highlighted {
+
+    .active {
+
+      [data-accordion-collapse] {
+        height: auto!important;
+      }
+    }
+
+
+  }
+}
+
+.hp-accordion-faq {
+  display: grid;
+  text-align: left;
+
+  [data-accordion-parent] {
+    border-top: 1px solid var(--color-grey-200);
+
+    &:nth-child(1) {
+      border-top: 0;
+    }
+  }
+  
+
+  [data-accordion-summary] {
+    padding: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 1.25rem;
+    color: var(--color-grey-800);
+    border: 0;
+    width: 100%;
+    cursor: pointer;
+    text-align: left;
+    font-size: 0.9375rem;
+    margin-bottom: 0;
+    font-weight: 500;
+
+    &:after {
+      content: '\2b';
+      font-family: "Font Awesome 6 Pro";
+    }
+
+    i {
+      display: none;
+    }
+
+    &.collapsed {
+
+      &:after {
+        content: '\f068';
+        font-family: "Font Awesome 6 Pro";
+      }
+
+      i {
+        transform: rotate(180deg);
+      }
+    }
+
+    i {
+      transition: transform ease .2s;
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .hp-accordion-faq {
+    [data-accordion-summary] {
+      padding: 1.25rem;
+    }
+  }
+}

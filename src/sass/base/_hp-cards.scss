@@ -1,0 +1,284 @@
+// update card
+[class^="hp-card-update"] {
+  overflow: hidden;
+  border-radius: 1rem;
+  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.05), 0px 8px 32px rgba(0, 0, 0, 0.05);
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+
+  &.hp-loading {
+    pointer-events: none;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: ease-in-out all .5s;
+    transform: scale(1);
+    transform-origin: center;
+  }
+
+  figure {
+    margin: 0;
+    padding-top: 67%;
+    position: relative;
+    overflow: hidden;
+    background: $color-grey-100;
+  }
+
+  .hp-card-label {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    z-index: 2;
+    transition: ease-in-out all .5s;
+  }
+
+  .hp-card-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+
+    &:after {
+      content: '';
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0);
+      position: absolute;
+      left: 0;
+      top: 0;
+      transition: ease-in-out .5s;
+    }
+  }
+
+  .hp-card-social {
+    position: absolute;
+    top: 1rem;
+    transition: ease all .3s;
+    transform: translateY(-3rem);
+    z-index: 3;
+    border: 1px solid rgba(255,255,255,0.65);
+    color: rgba(255,255,255,0.65);
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+
+    &:hover {
+      border: 1px solid #fff;
+      color: #fff;
+    }
+  }
+
+  @for $i from 0 to 4 {
+    .hp-card-social:nth-child(#{$i + 1}) {
+      left: 1rem + ($i * 2.5rem);
+      transition: ease all .3s $i * 0.05s;
+    }
+  }
+
+  .hp-card-body {
+    padding: 1.25rem;
+    gap: .5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+
+  .hp-card-date {
+    font-size: 0.875rem;
+    color: $color-grey-400;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  .hp-card-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--color-grey-800);
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  p {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    margin-bottom: 1rem;
+  }
+
+  .hp-card-more {
+    margin-top: auto;
+  }
+}
+
+.hp-card-imageonly {
+  @extend [class^="hp-card-update"];
+  border-radius: .25rem;
+
+  button {
+    background: transparent;
+  }
+
+  figure {
+    backface-visibility: hidden;
+
+    &:hover {
+      figcaption {
+        transform: translateY(0);
+      }
+    }
+  }
+
+  figcaption {
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    right: 1rem;
+    color: #fff;
+    z-index: 2;
+    font-size: .75rem;
+    transform: translateY(2rem);
+    transition: ease-in-out .3s;
+    display: none;
+  }
+}
+
+@media (min-width: 992px) {
+
+  [class^="hp-card-update"] {
+
+    figure {
+
+      &:hover {
+
+        .hp-card-social {
+          transform: translateY(0);
+        }
+
+        .hp-card-image {
+
+          &:after {
+            background: rgba(0,0,0,.6);
+          }
+        }
+
+        .hp-card-label {
+          transform: translateY(-2.5rem);
+          transition: ease-in-out all .4s;
+        }
+
+        img {
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+  .hp-card-update-wide {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    figure {
+      height: 100%;
+      aspect-ratio: auto;
+      min-height: 300px;
+    }
+
+    .hp-card-body {
+      grid-row: 1;
+      display: flex;
+      flex-direction: column;
+      padding: 1.5rem 3rem 1.5rem 1.5rem;
+
+      p {
+        -webkit-line-clamp: 5;
+      }
+
+      .hp-card-more {
+        margin-top: auto;
+      }
+    }
+  }
+}
+
+@media (min-width: 1024x) {
+  .hp-card-imageonly {
+
+    figcaption {
+      display: block;
+    }
+  }
+}
+
+// Help center card
+.hp-help-card {
+  border: 1px solid $color-grey-100;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-content: flex-start;
+  a {
+    text-decoration: none;
+  }
+
+  &-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    border-bottom: 1px solid $color-grey-100;
+    margin-bottom: 1rem;
+
+    i {
+      font-size: 1.5rem;
+      color: var(--color-primary);
+    }
+
+    small {
+      margin-left: auto;
+    }
+
+    h4 {
+      font-size: 1.125rem;
+      font-weight: $weight-regular;
+      margin: 0;
+    }
+
+    &:hover {
+
+      h4 {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  nav {
+    display: grid;
+    gap: .75rem;
+    padding: 0 1rem;
+    margin-bottom: 1rem;
+    font-size: .925rem;
+  }
+
+  &-more {
+    font-weight: 500;
+    margin-top: auto;
+    padding: 0 1rem 1rem 1rem;
+    font-size: .925rem;
+
+  }
+}

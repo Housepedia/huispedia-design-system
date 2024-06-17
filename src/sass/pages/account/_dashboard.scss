@@ -1,0 +1,239 @@
+header#office-dashboard-header{
+  background: #25315a;
+  position: relative;
+  background-size: cover;
+  height: 250px;
+  padding-top: 45px;
+  h1{
+    color:#fff;
+    font-size: 2rem;
+    font-weight: 600;
+  }
+  h2{
+    color:#fff;
+    font-weight: 300;
+    font-size: 1.5rem;
+  }
+}
+section#properties-overview-pro{
+  margin-top:-75px;
+  .dataTables_filter{
+    padding:0 1rem;
+  }
+  .table.table-properties{
+    width: 100%;
+    thead tr th{
+      vertical-align: middle;
+      font-weight: 600;
+      background-color: var(--color-slate-100);
+      border-bottom: 1px solid #eee;
+      border-top: 1px solid #eee;
+      font-size:0.7rem;
+      padding: 1rem 0.5rem;
+    }
+    thead tr th:first-child{
+      padding-left: 1rem;
+    }
+    tbody tr td{
+      padding: 1rem 0.5rem;
+      vertical-align: middle;
+    }
+    tbody tr:last-child td {
+      border-bottom: 1px solid #dee2e6;
+    }
+    tbody tr td:first-child{
+      padding-left:1rem;
+    }
+    tbody tr:hover td{
+      background:#Fbfbfb;
+    }
+    tbody tr td img{
+      width: 65px;
+      height:55px;
+      object-fit: cover;
+      border-radius: 4px;
+      float:left;
+      margin-right:15px;
+      &.user-image{
+        width:20px;
+        height:20px;
+        border-radius: 50%;
+      }
+    }
+
+    tbody tr td .noprops{
+      min-height: 220px;
+      img{
+        max-width: 120px;
+        height:auto;
+        display: inline-block;
+        width:100%;
+        margin-top:40px;
+        float:none;
+      }
+      span{
+        margin:20px 0;
+        display: block;
+        font-size:18px;
+        color: var(--color-grey-600);
+      }
+    }
+    tbody tr td a{
+      text-decoration: none;
+      font-size:0.825rem;
+    }
+    tbody tr td:first-child a{
+      float:left;
+    }
+    tbody tr td a div.address{
+      font-weight: 500;
+      color: var(--color-primary);
+    }
+    tbody tr:hover td a div.address{
+      color: var(--color-primary);
+    }
+    tbody tr td a div.postcodecity{
+      font-size:0.745rem;
+      font-weight: 400;
+      color: var(--color-grey-800);
+    }
+    tbody tr td a div.status{
+      font-size:0.8rem;
+      font-weight: 600;
+      color: var(--color-grey-800);
+    }
+    tbody tr td span.assign-status{
+      font-size:12px;
+      background: var(--color-primary);
+      padding:2px 4px;
+      border-radius: 4px;
+      display: inline-block;
+      color:#FFF;
+      .fas{
+        margin-right:4px;
+      }
+      &.assigned{
+        background: #6fd454;
+      }
+      &.pending {
+        background: #de9b39;
+      }
+      &.archived {
+        background: #9a928c;
+      }
+    }
+    tbody tr td div.profile-hidden{
+      font-size:12px;
+      color: var(--color-primary);
+      padding:2px 4px;
+      border-radius: 4px;
+      display: inline-block;
+    }
+    a.property-action{
+      margin-right:7px;
+      color: var(--color-primary);
+    }
+    a.property-action:hover{
+      opacity:0.7;
+    }
+    a.property-action:last-child{
+      margin-right:0;
+    }
+  }
+
+  div.dataTables_wrapper{
+    div.dataTables_info, div.dataTables_paginate{
+      padding:1rem;
+    }
+  }
+
+
+
+}
+
+$admin-card-radius:10px;
+article.property-admin-card{
+  width: 100%;
+  border-radius: $admin-card-radius;
+  position: relative;
+  z-index: 5;
+  background:#fff;
+  box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
+  .card-body{
+    position: relative;
+    padding: 1rem;
+    color: var(--color-grey-800);
+    display: flex;
+    font-size:0.9125rem;
+    h1 {
+      font-weight: 400;
+      font-size: 1rem;
+      line-height: 28px;
+      margin:0;
+    }
+    h2 {
+      font-weight: 400;
+      font-size:0.9125rem;
+      line-height: 24px;
+
+    }
+    img.property-admin-card-image{
+      width: 160px;
+      height:120px;
+      border-radius: 10px;
+      object-fit: cover;
+
+    }
+    .property-admin-card-content{
+      flex:1;
+    }
+  }
+  .active-status-container{
+    border-radius: .9rem;
+    background-color: #f8f8f8;
+    padding:20px;
+    display: inline-block;
+    width: 100%;
+    max-width: 380px;
+    color:#fff;
+    font-size: 17px;
+    position: relative;
+    h3{
+      font-size: 16px;
+      color:#fff;
+      font-weight: 400;
+      line-height: 26px;
+      margin:0;
+    }
+    hr{
+      border-color: rgba(255,255,255,0.3);
+    }
+  }
+}
+@media (max-width: 768px) {
+  header#office-dashboard-header{
+    h1{
+      font-size: 1.225rem;
+    }
+    h2{
+      font-size: 1rem;
+    }
+  }
+  article.property-admin-card {
+    .card-body{
+      h1 {
+        font-size: 16px;
+      }
+      h2 {
+        font-size: 16px;
+      }
+    }
+    a.action-btn{
+      padding:0 10px;
+      line-height: 30px;
+      border-right: 15px;
+      font-size:0.9rem;
+    }
+  }
+
+}

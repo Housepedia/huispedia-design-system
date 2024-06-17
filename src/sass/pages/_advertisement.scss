@@ -1,0 +1,396 @@
+header#advertisementHeader{
+  height: 60vh;
+  max-height: 650px;
+  width:100%;
+  overflow: auto !important;
+  background-color: var(--color-slate-100);
+  background-size:cover;
+  position: relative;
+  z-index: 2;
+  background-image: url('/img/pages/adverteren/header_back.jpg');
+  background-position: center center;
+  margin-top:0;
+  > div{
+    z-index: 2;
+    position: relative;
+  }
+  h1{
+    color:#fff;
+    font-size:50px;
+    line-height: 1.4;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  }
+  h2{
+    color:#fff;
+    font-size:30px;
+    line-height: 1.4;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  }
+  &:after {
+    display: block;
+    content: "";
+    position: absolute;
+
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    background: rgba(37, 49, 90, 0.6);
+  }
+}
+section#hspAdPageHeaderBottom{
+  background:#25315a;
+  background-image: -webkit-linear-gradient(150deg, #25315a 75%, #FF385C 75%);
+  color:#fff;
+  line-height: 50px;
+  position: relative;
+  z-index: 5;
+  font-size: 1.2rem;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  a.link{
+    color: var(--color-primary);
+    font-weight: 600;
+    text-decoration: underline !important;
+  }
+  a.logo{
+    width:100px;
+    height: 100px;
+    position: relative;
+    margin: -65px 20px 0 20px;
+    z-index: 1;
+    display: inline-block;
+    img{
+      width:100px;
+      height: 100px;
+      object-fit: contain;
+      transition: all 1s ease 2s;
+      border-radius: 50%;
+     // box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+    }
+  }
+}
+main#advertisementMain{
+  p.promo-text{
+    font-size: 18px;
+    line-height: 30px;
+    color: var(--color-grey-800);
+  }
+  .advertisement-partners a img{
+    object-fit: contain;
+    max-width: 150px;
+    max-height: 50px;
+    width: 70%;
+    margin: 40px 0;
+  }
+}
+section{
+  &.bg-dark{
+    background: var(--color-grey-800);
+    color:#fff;
+  }
+  &.py-100{
+    padding-top:100px;
+    padding-bottom:100px;
+  }
+}
+section#advertisementSectionNumbers{
+  .panel{
+    border-radius:12px;
+  }
+  .panel-body{
+    strong{
+      font-size: 1.4rem;
+      color: var(--color-grey-800);
+    }
+    font-size: 1.2rem;
+  }
+}
+.line-spacer {
+  background-color: var(--color-primary);
+  height: 4px;
+  border-radius: 2px;
+  width: 140px;
+  margin: 34px auto;
+}
+
+img.partner-logo{
+  width: 100%;
+  max-width: 170px;
+  height: 70px;
+  margin:24px 0;
+  object-position: center;
+  object-fit: contain;
+}
+.plyr--video{
+  border-radius: 10px;
+  .plyr__poster{
+    background-size: cover;
+    background-position: inherit;
+  }
+  .plyr__control--overlaid{
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  }
+}
+.browser-mockup {
+  border-top: 2em solid rgba(230, 230, 230, 1);
+  box-shadow: 0 0.1em 1em 0 rgba(0, 0, 0, 0.4);
+  position: relative;
+  border-radius: 10px;
+  max-width: 800px;
+  margin:2rem auto 0 auto;
+  .img-container{
+    max-height: 600px;
+    overflow:hidden;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    img{
+      width: 100%;
+    }
+  }
+
+}
+
+.browser-mockup:before {
+  display: block;
+  position: absolute;
+  content: '';
+  top: -1.25em;
+  left: 1em;
+  width: 0.5em;
+  height: 0.5em;
+  border-radius: 50%;
+  background-color: #f44;
+  box-shadow: 0 0 0 2px #f44, 1.5em 0 0 2px #9b3, 3em 0 0 2px #fb5;
+}
+
+.browser-mockup.with-tab:after {
+  display: block;
+  position: absolute;
+  content: '';
+  top: -2em;
+  left: 5.5em;
+  width: 20%;
+  height: 0em;
+  border-bottom: 2em solid white;
+  border-left: 0.8em solid transparent;
+  border-right: 0.8em solid transparent;
+}
+.browser-mockup.with-url:after {
+  display: block;
+  position: absolute;
+  content: 'https://huispedia.nl';
+  top: -1.6em;
+  left: 5.5em;
+  width: calc(100% - 6em);
+  height: 1.2em;
+  border-radius: 2px;
+  background-color: white;
+}
+.browser-mockup > * {
+  display: block;
+}
+.browser-mockup {
+  flex: 1;
+}
+a.btn-advertisement-white{
+  display: inline-block;
+  border:1px solid #fff;
+  color:#fff;
+  line-height: 36px;
+  padding:0 30px;
+  border-radius: 20px;
+  margin-top:1rem;
+  text-decoration: none;
+  &:hover{
+    background: #fff;
+    color:#25315a;
+    text-decoration: none;
+  }
+  &.btn-sm{
+    padding: 0.35rem 0.5rem;
+    font-size: 0.875rem;
+    line-height: 1.5;
+  }
+}
+
+section#advertisementSectionIntro{
+  padding:60px 0;
+  p{
+    font-size:1.1rem;
+    max-width: 850px;
+    margin:0 auto;
+  }
+}
+section#advertisementSectionProducts{
+  p.sub-title{
+    font-size: 1.1rem;
+    color:#fff;
+    max-width: 620px;
+    margin:0 auto;
+  }
+
+  .position-container{
+    h3{
+      color:#fff;
+      font-size: 1.3rem;
+    }
+
+  }
+
+  .glide__arrow{
+    background: var(--color-primary);
+    color:#fff;
+    box-shadow: none;
+    border-radius: 50%;
+    padding:0;
+    border:none;
+    line-height: 50px;
+    width: 50px;
+    text-align: center;
+    &.glide__arrow--prev{
+      left:-70px;
+    }
+    &.glide__arrow--next{
+      right:-70px;
+    }
+  }
+  .glide__bullets{
+    display: block;
+    position: relative;
+  }
+}
+
+section#advertisementSectionTargeting{
+  ul{
+    li {
+      color: var(--color-primary);
+      span{
+        color: #fff;
+      }
+    }
+  }
+  .disclaimer{
+    color: var(--color-grey-600);
+    font-size:0.9rem;
+  }
+}
+section#advertisementSectionCookieless{
+  h2{
+    max-width: 750px;
+    font-size: 1.8rem;
+    line-height: 2.6rem;
+  }
+}
+section#advertisementSectionContact{
+  img{
+    background:#FF385C;
+    border:5px solid #FF385C;
+    width:200px;height:200px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  h3{
+    color:#fff;
+    font-size: 1.4rem;
+    line-height: 2.2rem
+  }
+  a.contact-link{
+    color:#fff;
+    &:hover{
+      text-decoration: underline!important;
+    }
+  }
+}
+@media (max-width: 1100px){
+  section#advertisementSectionProducts{
+    .glide__arrow{
+      &.glide__arrow--prev{
+        left:0;
+      }
+      &.glide__arrow--next{
+        right:0;
+      }
+    }
+  }
+}
+@media (max-width: 768px){
+  header#advertisementHeader{
+    height: 40vh;
+    h1{
+      font-size: 28px;
+      margin-top:-50px;
+    }
+    h2{
+      font-size: 1.125rem;
+    }
+  }
+  section#hspAdPageHeaderBottom{
+    padding:10px 24px;
+    line-height: 24px;
+    font-size: 15px;
+    span.text{
+      max-width: 280px;
+    }
+    a.logo{
+      width: 90px;
+      height: 90px;
+      position: absolute;
+      left: 0;
+      right: 0;
+      text-align: center;
+      margin: -95px auto 0 auto;
+      img{
+        width: 90px;
+        height: 90px;
+      }
+    }
+  }
+  section{
+    h2{
+      font-size: 1.4rem;
+      line-height: 1.8rem;
+    }
+    &.py-100{
+      padding-top:50px;
+      padding-bottom:50px;
+    }
+  }
+  section#advertisementSectionIntro{
+    padding:40px 0;
+    p{
+      font-size:1rem;
+    }
+  }
+  section#advertisementSectionNumbers{
+    .panel{
+      border-radius:8px;
+    }
+    .panel-body{
+      strong{
+        font-size: 1.2rem;
+      }
+      font-size: 0.6rem;
+    }
+  }
+  section#advertisementSectionProducts{
+    h2{
+    }
+    .glide__arrow{
+      &.glide__arrow--prev{
+        left:-10px;
+      }
+      &.glide__arrow--next{
+        right:-10px;
+      }
+    }
+  }
+  section#advertisementSectionCookieless{
+    h2{
+      font-size: 1.4rem;
+      line-height: 2rem;
+    }
+  }
+}

@@ -1,0 +1,111 @@
+header#forRealtorsPromoHeader{
+  height: 70vh;
+  max-height: 650px;
+  width:100%;
+  margin-top:-35px;
+  overflow: hidden !important;
+  background-color: var(--color-slate-100);
+  background-size:cover;
+  background-image: url('/img/page-banners/sell-home2.jpg');
+  background-position: center center;
+  position: relative;
+  z-index: 2;
+  opacity: 0;
+  transition: opacity 0.2s;
+  transition-delay: 0.3s;
+  &:after {
+    background: rgba(44, 65, 94, 0.6);
+  }
+  p{
+    color:#fff;
+  }
+  .promo-panel{
+    max-width: 500px;
+    width:100%;
+    margin:28% auto 0 auto;
+    transform: translate(0,-30px);
+    transition: transform 0.5s ease-out;
+    transition-delay: 0.3s;
+    z-index: 5;
+  }
+  &.showIt{
+    opacity: 1;
+    .promo-panel{
+      transform: translate(0,0);
+    }
+  }
+}
+main#forRealtorsPromoMain{
+  h2.promo-title{
+    font-size:28px;
+  }
+  p.promo-text{
+    font-size: 18px;
+    line-height: 30px;
+    color: var(--color-grey-800);
+  }
+  .promo-agents-img{
+    max-width: 350px;
+    border-radius: 10px;
+    width:80%;
+  }
+  .promo-image-container {
+    max-width: 350px  ;
+    height: 250px  ;
+    width: 80%;
+    box-shadow: 0 0.3rem 1rem rgba(0,0,0,0.15);
+    padding: 50px;
+    display: inline-block;
+    border-radius: 4px;
+    background: #fff;
+    text-align: center;
+    i {
+      font-size: 140px;
+      color: #FF385C;
+    }
+  }
+
+
+  .agents-row{
+    min-height: 350px;
+  }
+}
+section#bottomPromoSection{
+  background: #25315a;
+  padding:140px 50px;
+  h2{
+    font-size: 30px;
+    color:#fff;
+    text-align: center;
+  }
+}
+@media (max-width: 768px){
+  header#forRealtorsPromoHeader{
+    min-height: 200px;
+    height: 450px;
+    padding: 20px 0;
+    position: relative;
+    &:after{
+      background: rgba(44,65, 94,0.50);
+    }
+    .promo-panel{
+      margin:40px 0 0 0;
+      background: transparent;
+      text-align: center;
+      border:none;
+      h1{color:#fff;font-size:22px;}
+      p{color:#fff;}
+    }
+  }
+  main#forRealtorsPromoMain{
+    h2.promo-title {
+      font-size: 20px;
+    }
+  }
+  section#bottomPromoSection{
+    padding:50px 20px;
+    h2 {
+      font-size: 20px;
+    }
+  }
+}

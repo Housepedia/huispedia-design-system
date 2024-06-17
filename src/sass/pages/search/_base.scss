@@ -1,0 +1,207 @@
+body{
+  overflow-y:scroll;
+  height: 100%;
+  &.swal2-shown, &.p-overflow-hidden{
+    padding-right: 0!important;
+    overflow-y:scroll !important;
+    #navbar{
+      padding-right: 0.2rem !important;
+    }
+  }
+}
+#app-search{
+  position: absolute;
+  top:0;
+  bottom:0;
+  width: 100%;
+}
+#searchApp{
+  position: absolute;
+  top:56px;
+  bottom:0;
+  width: 100%;
+  &.frontView{
+    z-index: 2000;
+  }
+}
+#searchContentContainer{
+  position: relative;
+  z-index: 1;
+}
+.swal2-container {
+  z-index: 2000;
+  .swal2-title{
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: var(--color-grey-800);
+  }
+}
+@media (min-width: 992px) {
+  body{
+    &.swal2-shown{
+      #navbar{
+        padding-right: 15px !important;
+      }
+    }
+  }
+  #navbar,
+  .hp-navbar{
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+  }
+  #searchApp{
+    top:74px;
+  }
+  #searchContentContainer {
+    padding-top: 68px;
+  }
+}
+.tooltip {
+  display: block !important;
+  z-index: 10000;
+  max-width: 300px;
+  outline: none !important;
+  .tooltip-inner {
+    background: #fff;
+    color: var(--color-grey-800);
+    border-radius: 16px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+  }
+
+  .tooltip-arrow {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    position: absolute;
+    margin: 5px;
+    border-color: black;
+    z-index: 1;
+  }
+
+  &[x-placement^="top"] {
+    margin-bottom: 5px;
+
+    .tooltip-arrow {
+      border-width: 5px 5px 0 5px;
+      border-left-color: transparent !important;
+      border-right-color: transparent !important;
+      border-bottom-color: transparent !important;
+      bottom: -5px;
+      left: calc(50% - 5px);
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
+
+  &[x-placement^="bottom"] {
+    margin-top: 5px;
+
+    .tooltip-arrow {
+      border-width: 0 5px 5px 5px;
+      border-left-color: transparent !important;
+      border-right-color: transparent !important;
+      border-top-color: transparent !important;
+      top: -5px;
+      left: calc(50% - 5px);
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
+
+  &[x-placement^="right"] {
+    margin-left: 5px;
+
+    .tooltip-arrow {
+      border-width: 5px 5px 5px 0;
+      border-left-color: transparent !important;
+      border-top-color: transparent !important;
+      border-bottom-color: transparent !important;
+      left: -5px;
+      top: calc(50% - 5px);
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+
+  &[x-placement^="left"] {
+    margin-right: 5px;
+
+    .tooltip-arrow {
+      border-width: 5px 0 5px 5px;
+      border-top-color: transparent !important;
+      border-right-color: transparent !important;
+      border-bottom-color: transparent !important;
+      right: -5px;
+      top: calc(50% - 5px);
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+
+  &.popover {
+    $color: #f9f9f9;
+  .popover__heading{
+    padding:12px 40px 12px 24px;
+    border-bottom:1px solid #e9ecf1;
+    position: relative;
+    h2{
+      font-size: 1.1rem;
+      font-weight: 400;
+    }
+    .close-button{
+      width: 34px;
+      height:34px;
+      border-radius: 50%;
+      position: absolute;
+      display: inline-block;
+      text-align: center;
+      line-height: 34px;
+      top:5px;
+      right:5px;
+      &:hover{
+        cursor: pointer;
+        background:#dfe8ee;
+      }
+    }
+  }
+  .popover__body{
+     padding: 16px 24px 24px;
+     font-size: 1.05rem;
+     line-height: 1.6;
+  }
+    .popover-inner {
+      background: $color;
+      color: black;
+      border-radius: 5px;
+      box-shadow: 0 5px 20px rgba(black, .2);
+    }
+
+    .popover-arrow {
+      border-color: $color;
+    }
+  }
+
+  &[aria-hidden='true'] {
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .15s, visibility .15s;
+  }
+
+  &[aria-hidden='false'] {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity .15s;
+  }
+}
+
+@media (max-width: 767px){
+  .swal2-container .swal2-modal.swal2-show{
+    .swal2-close{
+      width: 50px;
+      height:50px;
+    }
+    border-radius: 0 !important;
+  }
+}

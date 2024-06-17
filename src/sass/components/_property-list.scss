@@ -1,0 +1,115 @@
+.property-list-container{
+  padding:0;
+  .title{
+    font-size:18px;
+    border-bottom: 1px solid #e9eaed;
+    padding-bottom: 15px;
+    color: var(--color-grey-800);
+    font-weight: 600;
+  }
+  .property-list-card{
+    background-color: #FFF;
+    color: var(--color-grey-800);
+    position: relative;
+    overflow: hidden;
+    display:block;
+    border-bottom: 1px solid #e9eaed;
+    &:last-child{
+      border-bottom:none;
+      margin-bottom: 0;
+      padding-bottom:0;
+    }
+    a{
+      display:block;
+      overflow: auto;
+      padding: 8px 10px;
+      color:inherit;
+      &:hover{
+        color:inherit;
+        background: mix(#5C91EB,#fff,3%);
+      }
+    }
+    .img-container{
+      width:85px;
+      height:65px;
+      overflow: hidden;
+      float:left;
+      position: relative;
+      .img-container-inner{
+        width:100%;
+        height:100%;
+        overflow:hidden;
+        border-radius: 4px;
+        img{
+          width:100%;
+          height:100%;
+          border-radius: 4px;
+          overflow:hidden;
+          object-fit: cover;
+          z-index: 1;
+          position: relative;
+        }
+      }
+    }
+    .content-container{
+      width:calc(100% - 85px);
+      overflow: hidden;
+      float:left;
+      height:65px;
+      padding:0 0 0 8px;
+      .address {
+        font-size: 15px;
+        display:block;
+        font-weight: 400;
+        width:100%;
+        color: var(--color-grey-800);
+        float:left;
+      }
+      .details{
+        line-height: 16px;
+        display: block;
+        float:left;
+        width:100%;
+        .detail-item{
+          font-size: 13px;
+          color: var(--color-grey-600);
+          margin: 0 0 0 3px;
+          display: inline-block;
+          &:first-child{
+            margin:0;
+          }
+          &:first-child:before{
+            content: "";
+            margin:0;
+          }
+        }
+        .detail-item:before{
+          font-size: 4px;
+          margin: -1px 4px 0 1px;
+          color: #848484;
+          display: inline-block;
+          vertical-align: middle;
+          content: "\2b24";
+        }
+      }
+      .price{
+        display: block;
+        font-size:16px;
+        line-height: 24px;
+        color: var(--color-grey-800);
+        width:100%;
+        font-weight: 600;
+        float: left;
+      }
+      .status{
+        display: block;
+        font-size:14px;
+        line-height: 22px;
+        color: var(--color-grey-800);
+        width:100%;
+        font-weight: 600;
+        float: left;
+      }
+    }
+  }
+}

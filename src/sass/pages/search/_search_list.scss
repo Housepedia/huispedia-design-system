@@ -1,0 +1,219 @@
+$listContainerWidth : 750px;
+#searchListContainer{
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  overflow: hidden;
+  background: #fff;
+  padding: 0 15px;
+  min-height: 50vh;
+  section#searchListSection{
+    position: relative;
+    min-height: 50vh;
+    div.loading-overlay{
+      position: absolute;
+      z-index: 10;
+      top:0;
+      left:0;
+      right:0;
+      bottom:0;
+      opacity:0.8;
+      background: #fff;
+    }
+  }
+}
+section#selectStreetCities{
+  padding: 16px 0;
+  h3{
+    font-size: 18px;
+    font-weight: 300;
+    margin-bottom: 24px;
+  }
+}
+nav#searchPagination{
+  user-select: none;
+  padding-right: 15px;
+  position: relative;
+  margin: 16px 0;
+  text-align: center;
+
+  .p-paginator-pages {
+    display: flex;
+    gap: .5rem;
+  }
+
+  .pagination-info{
+    font-size: 14px;
+    margin-bottom: 12px;
+  }
+  button{
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 0 .5rem 0;
+      border: 1px solid #e0e3e5;
+      background: #fff;
+      border-radius: 50%;
+      min-width: 3rem;
+      height: 3rem;
+
+      &:focus {
+        box-shadow: 0 0 0 0.2rem rgba(#ff385c, 0.2);
+      }
+
+
+      &.p-disabled{
+        opacity: 0.3;
+        cursor: default;
+      }
+      &:not(.p-disabled):hover{
+        color: #3c515b;
+        background-color: #f8f8f8;
+      }
+      &.p-highlight{
+        color: var(--color-primary);
+        border-color: var(--color-primary);
+        cursor: default;
+        &:hover{
+          color: var(--color-primary);
+          background-color: #fff7f9;
+        }
+      }
+      &.p-paginator-first, &.p-paginator-last{
+        border:none;
+      }
+      .pi.pi-angle-double-left:before{
+        content: "\f100";
+        font-family: 'Font Awesome 5 Pro';
+      }
+      .pi.pi-angle-double-right:before{
+        content: "\f101";
+        font-family: 'Font Awesome 5 Pro';
+      }
+    }
+}
+section#searchExtraLocationInfo{
+  border-top:1px solid #e0e3e5;
+  padding: 24px 15px 0 0;
+  h2{
+    font-weight: 600;
+    font-size:1rem;
+    margin: 24px 0 8px 0;
+  }
+  p{
+    font-size: 0.9125rem;
+  }
+}
+section#searchMoreInfo{
+  padding: 16px 15px 0 0;
+  h2{
+    font-weight: 600;
+    font-size:1rem;
+    margin:16px 0 8px 0;
+  }
+  p{
+    font-size: 0.9125rem;
+  }
+}
+
+section#searchFooter{
+  font-size: 14px;
+  border-top:1px solid #e0e3e5;
+  padding: 32px 15px 32px 0;
+  margin-top:24px;
+}
+section#saveSearchMobile{
+  position: fixed;
+  bottom:10px;
+  z-index: 100;
+  left:0;
+  right:0;
+  text-align: center;
+}
+/* IPHONE X */
+@media only screen
+and (device-width : 375px)
+and (device-height : 812px)
+and (-webkit-device-pixel-ratio : 3) {
+  section#saveSearchMobile{
+    bottom: 24px;
+  }
+}
+@media (min-width: 992px) {
+  #searchListContainer{
+    display:block;
+    width: 650px;
+    margin-left: calc(100% -  650px);
+    padding:15px 0 0 15px;
+  }
+  nav#searchPagination {
+    ul {
+      li {
+        margin-right: 8px;
+      }
+    }
+  }
+}
+@media (min-width: 1200px) {
+  #searchListContainer{
+    width: 800px;
+    margin-left: calc(100% -  800px);
+  }
+}
+
+#searchListContainer{
+  #searchNavSort{
+    border-top: 1px solid #dfe8ee;
+    border-bottom: 1px solid #dfe8ee;
+    margin-bottom: 16px;
+    ul{
+      display: flex;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      justify-content: flex-start;
+      .sort-item{
+        padding: 1px 14px 0;
+        font-size: 14px;
+        display: inline-block;
+        line-height: 42px;
+        text-align: center;
+        white-space: nowrap;
+        color: #3c515b;
+        cursor: pointer;
+        &:before {
+          display: block;
+          content: attr(title);
+          font-weight: 600;
+          height: 0;
+          overflow: hidden;
+          visibility: hidden;
+        }
+        &:first-child{
+          padding-left:0;
+        }
+        &:hover, &.active{
+          color: var(--color-primary);
+          font-weight: 500;
+        }
+      }
+    }
+  }
+
+  .list-container{
+    article.hsp-photo-card{
+      width: 50%;
+      padding:0 15px 15px 0;
+      float:left;
+    }
+    &.grid-1{
+      article.hsp-photo-card{
+        width: 100%;
+        padding:0 0 15px 0;
+        float:none;
+      }
+    }
+  }
+
+}
+

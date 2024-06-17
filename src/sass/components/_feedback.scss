@@ -1,0 +1,8 @@
+@keyframes animateFeedback {
+  0% {opacity: 0}
+  100% { opacity: 100%;}
+}
+
+.hp-animate-feedback {
+  animation: animateFeedback .5s ease-out forwards;
+}

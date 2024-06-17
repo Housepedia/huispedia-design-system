@@ -1,0 +1,66 @@
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('/fonts/poppins/poppins-v20-latin-300.eot');
+    src: url('/fonts/poppins/poppins-v20-latin-300.svg#Poppins') format('woff2'),
+        url('/fonts/poppins/poppins-v20-latin-300.ttf') format('truetype'),
+         url('/fonts/poppins/poppins-v20-latin-300.woff') format('woff'),
+         url('/fonts/poppins/poppins-v20-latin-300.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Poppins';
+    src: url('/fonts/poppins/poppins-v20-latin-500.eot');
+    src: url('/fonts/poppins/poppins-v20-latin-500.svg#Poppins') format('woff2'),
+        url('/fonts/poppins/poppins-v20-latin-500.ttf') format('truetype'),
+         url('/fonts/poppins/poppins-v20-latin-500.woff') format('woff'),
+         url('/fonts/poppins/poppins-v20-latin-500.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Poppins';
+    src: url('/fonts/poppins/poppins-v20-latin-600.eot');
+    src: url('/fonts/poppins/poppins-v20-latin-600.svg#Poppins') format('woff2'),
+        url('/fonts/poppins/poppins-v20-latin-600.ttf') format('truetype'),
+         url('/fonts/poppins/poppins-v20-latin-600.woff') format('woff'),
+         url('/fonts/poppins/poppins-v20-latin-600.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Poppins';
+    src: url('/fonts/poppins/poppins-v20-latin-700.eot');
+    src: url('/fonts/poppins/poppins-v20-latin-700.svg#Poppins') format('woff2'),
+        url('/fonts/poppins/poppins-v20-latin-700.ttf') format('truetype'),
+         url('/fonts/poppins/poppins-v20-latin-700.woff') format('woff'),
+         url('/fonts/poppins/poppins-v20-latin-700.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Poppins';
+    src: url('/fonts/poppins/poppins-v20-latin-italic.eot');
+    src: url('/fonts/poppins/poppins-v20-latin-italic.svg#Poppins') format('woff2'),
+        url('/fonts/poppins/poppins-v20-latin-italic.ttf') format('truetype'),
+         url('/fonts/poppins/poppins-v20-latin-italic.woff') format('woff'),
+         url('/fonts/poppins/poppins-v20-latin-italic.woff2') format('woff2');
+    font-weight: 300;
+    font-style: italic;
+  }
+
+  @font-face {
+    font-family: 'Poppins';
+    src: url('/fonts/poppins/poppins-v20-latin-regular.eot');
+    src: url('/fonts/poppins/poppins-v20-latin-regular.svg#Poppins') format('woff2'),
+        url('/fonts/poppins/poppins-v20-latin-regular.ttf') format('truetype'),
+         url('/fonts/poppins/poppins-v20-latin-regular.woff') format('woff'),
+         url('/fonts/poppins/poppins-v20-latin-regular.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+  }

@@ -1,0 +1,312 @@
+#propertySectionTitle{
+  position: relative;
+  .status-labels-container{
+    font-size: 14px;
+    padding-right:60px;
+    overflow:auto;
+    svg.fa-svg-icon{
+      width: 12px;
+      height: 12px;
+    }
+    .property-title-label{
+      background-color: rgb(45 59 106 / 10%);
+      color: #2d3b6a;
+      font-weight: 400;
+      font-size: 0.8rem;
+      padding: 0.3rem 0.8rem;
+      border-radius: 15px;
+      margin:0 0.3rem 0.3rem 0;
+      display: inline-block;
+      float: left;
+    }
+    .property-status-label{
+      color:#444;
+      &.status-color-optermijnbeschikbaar{
+        background:rgba($color-optermijnbeschikbaar,0.2);
+      }
+      &.status-color-openvoorbod{
+        background:rgba($color-openvoorbod,0.2);
+      }
+      &.status-color-nietbeschikbaar{
+        background:rgba($color-nietbeschikbaar,0.2);
+      }
+      &.status-color-verkocht{
+        background:rgba($color-verkocht,0.2);
+      }
+    }
+  }
+  h1, h2{
+    font-weight: 500;
+    color: #444;
+  }
+  h1{
+    display: block;
+    font-size: 1.6rem;
+    padding-right:65px;
+    line-height: 2rem;
+    margin-bottom: 6px;
+    span.sub-title{
+      display: block;
+      font-size: 15px;
+      font-weight: normal;
+      line-height: 1.2rem;
+      margin-top: 2px;
+      color: #777;
+      a{
+        color: #777;
+        text-decoration: none;
+        &:before{
+          content: "⬤";
+          color: #bbb;
+          display: inline-block;
+          vertical-align: middle;
+          margin: 0 .5rem;
+          font-size: 0.2rem;
+        }
+      }
+    }
+  }
+  h2.specs{
+    font-family: "Poppins", sans-serif;
+    font-size: 0.925rem;
+    line-height: 1.2rem;
+    .spec-item{
+      .value{
+        font-weight: 500;
+      }
+      small{
+        color: var(--color-grey-600);
+        font-size: 0.925rem;
+      }
+      &:not(:last-child):after{
+        content: "⬤";
+        color: var(--color-grey-800);
+        display: inline-block;
+        vertical-align: middle;
+        margin:0 4px;
+        font-size:0.2rem;
+      }
+    }
+  }
+
+  #titlePrices{
+    font-size: 1rem;
+    width: 100%;
+    overflow: auto;
+    strong{
+      color: var(--color-grey-800);
+      font-weight: 600;
+    }
+    .price-item{
+      display: block;
+      .title{
+        display: block;
+        font-size: 14px;
+        color:#777;
+      }
+      .value{
+        display: inline-block;
+        font-size:18px;
+        &.text-line-through{
+          text-decoration: line-through;
+        }
+      }
+      #titleValuationDisclaimer{
+        font-size: 1rem;
+        i{
+          color: var(--color-grey-800);
+          cursor: pointer;
+          &.warning{
+            color: var(--color-warning);
+          }
+        }
+      }
+      #marketStatusTooltip{
+        cursor: pointer;
+        &:hover{
+          text-decoration: underline;
+        }
+      }
+    }
+    .warning{
+      font-size:0.8rem;
+    }
+  }
+  #titleDetailsContainer{
+    margin-top:0.75rem;
+    color:#777;
+    .detail-item{
+      display: inline-block;
+      margin-right:12px;
+      .title{
+        display: block;
+        font-size:14px;
+      }
+      .value{
+        display: block;
+        font-size:15px;
+        color:#444;
+        .value-range{
+          font-weight: 400;
+        }
+        strong{
+          font-weight: 400;
+        }
+      }
+      .disclaimer{
+        margin-top:2px;
+        font-size:13px;
+        svg{
+          width: 0.8rem;
+          height: 0.8rem;
+          display: inline-block;
+          vertical-align: baseline;
+          fill: #ff9e0e;
+        }
+        &:hover{
+          text-decoration: underline;
+          cursor: pointer;
+        }
+      }
+    }
+    #extraFeaturesContainer{
+      display: inline-block;
+      vertical-align: top;
+    }
+    &.valuation-highlight{
+      .detail-item-price{
+        .value{
+          font-size: 1rem;
+          .value-range{
+            font-weight: 600;
+          }
+        }
+      }
+      #extraFeaturesContainer{
+
+
+      }
+    }
+  }
+
+  #mapButtonContainer{
+    position: absolute;
+    top:0;
+    right:0;
+    border-radius: 5px;
+    overflow: hidden;
+    width:55px;
+    height: 55px;
+    background: #f3f3f3;
+    border:1px solid #ddd;
+    > div{
+      height: 100%;
+      width: 100%;
+      background: url('/img/pages/property/profile_map_icon.png');
+      background-size: cover;
+      transition: all .25s cubic-bezier(.23,1,.32,1);
+      filter: grayscale(0.5);
+    }
+    &:hover{
+      cursor: pointer;
+      > div{
+        transform: scale(1.15);
+        filter: grayscale(0);
+      }
+    }
+  }
+
+}
+svg.market-icon{
+  width: 0.8rem;
+  //height: 0.8rem;
+  margin-right: 4px;
+  vertical-align: middle;
+  fill: #777;
+  margin-bottom: 3px;
+  &.market-icon-low{
+    fill: #2b9eb3;
+  }
+  &.market-icon-realistic{
+    fill: #00bd00;
+  }
+  &.market-icon-high{
+    fill: #ebb621;
+  }
+}
+@media (max-width: 767px) {
+  #propertySectionTitle{
+    h1{
+      font-size: 1.3rem;
+      padding-right:62px;
+      span.title{
+        font-size: 1.2rem;
+        line-height: 1.4rem;
+        margin-bottom: 4px;
+      }
+      span.sub-title{
+        font-size: 0.9rem;
+        line-height: 1.1rem;
+      }
+    }
+    #titlePrices{
+      .price-item{
+        .title{
+          font-size: 0.8rem;
+          line-height: 1.3rem;
+        }
+        .value{
+          line-height: 1.4rem;
+          font-size: 0.9375rem;
+        }
+      }
+    }
+    #mapButtonContainer{
+      width:52px;
+      height:52px;
+    }
+    #titleDetailsContainer{
+      .detail-item{
+        margin-right: 0;
+        &.detail-item-price{
+          display: block;
+          margin-bottom: 0.75rem;
+        }
+      }
+      #extraFeaturesContainer{
+        display: block;
+        overflow: auto;
+        .detail-item{
+          float:left;
+          margin-right:16px;
+          position: relative;
+          .title{
+            display: inline-block;
+            color:#444;
+            font-size: 14px;
+            text-transform: lowercase;
+          }
+          .value{
+            display: inline-block;
+            float: left;
+            margin-right: 6px;
+            color:#444;
+            font-size: 14px;
+          }
+          &:not(:last-child):after{
+            color: #777;
+            content: "⬤";
+            display: inline-block;
+            font-size: 0.2rem;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-0.1rem);
+            text-align: center;
+            width: 16px;
+            right: -16px;
+      }
+    }
+  }
+}
+}
+}

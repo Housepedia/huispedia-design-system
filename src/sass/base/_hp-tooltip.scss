@@ -1,0 +1,34 @@
+.hp-tooltip {
+
+  .tooltip-inner{
+    background: #fff;
+    color: #2c3b6b;
+    font-size: .9375rem;
+    box-shadow: 0 2px 4px 4px rgba(0,0,0,0.1);
+  }
+  .tooltip-arrow{
+    border-color: #fff;
+    bottom: -4px;
+  }
+  .tooltip-link,
+  .hp-tooltip-link {
+    color:#FF385C;
+    font-weight: bold;
+  }
+}
+
+
+.v-popper__wrapper {
+  box-shadow: 0 2px 4px 4px rgba(0,0,0,0.1);
+  border-radius: .25rem;
+  color: #2c3b6b;
+}
+
+.v-popper__arrow-container {
+  border: .5rem solid transparent;
+  border-top: .5rem solid #fff!important;
+
+  > * {
+    display: none;
+  }
+}

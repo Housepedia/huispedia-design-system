@@ -1,0 +1,108 @@
+.hp-account-referral-aside {
+  position: fixed;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: calc(100dvh - 53px);
+  transition: top 0.3s;
+  border-radius: 1rem 1rem 0 0;
+  background-color: #fff;
+  z-index: 9999;
+  padding: 1rem 0;
+
+  &-content {
+    overflow: scroll;
+    overflow-x: hidden;
+    height: calc(100% - 3rem);
+  }
+
+  &.hp-active {
+    top: 53px;
+  }
+
+  @media (min-width: 768px) {
+    height: 100%;
+  }
+}
+
+.hp-mobile-mask {
+  background: rgba(0,0,0,0.5);
+  height: 100%;
+  position: fixed;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  z-index: 9998;
+  opacity: 0;
+  transition: ease-out opacity 0.3s, ease top 0s 0.3s;
+
+
+
+  &.hp-active {
+    top: 0px;
+    opacity: 1;
+    transition: ease-in opacity 0.3s;
+  }
+}
+
+@media (max-width: 768px) {
+  .hp-account-referral-aside-processing {
+
+    + .hp-sticky-invitation-bar,
+    .hp-aside-controls,
+    .hp-aside-total-users {
+      display: none;
+    }
+
+    .hp-account-referral-aside-content {
+      overflow: auto;
+      height: auto;
+    }
+
+    .hp-account-referral-aside-details {
+      padding: 0;
+    }
+  }
+}
+
+  @media (min-width: 768px) {
+    .hp-account-referral-aside,
+    .hp-account-referral-aside-processing {
+      position: static;
+      transform: none;
+      border-radius: .5rem;
+      overflow: hidden;
+      padding: 0;
+      border: 1px solid var(--color-grey-200);
+
+      &-content {
+        overflow-y: unset;
+        overflow-x: unset;
+        height: unset;
+      }
+  }
+
+  .hp-mobile-mask {
+    display: none;
+  }
+}
+
+.hp-scrollbar {
+
+  /* width */
+  &::-webkit-scrollbar {
+    width: 6px;
+    border-radius: 3px;
+  }
+
+  /* Track */
+  &::-webkit-scrollbar-track {
+    background: var(--color-grey-200);
+  }
+
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: var(--color-grey-400);
+    border-radius: 3px;
+  }
+}

@@ -1,0 +1,72 @@
+header.promo_claim_home{
+  background-image: url('/img/core/pages/claim_home/background_header_claim_home.jpg');
+}
+main.promo_claim_home{
+  section.promo-section{
+    padding:75px;
+    .header-line{
+      background-color: var(--color-primary);
+      height: 4px;
+      border-radius: 2px;
+      width: 50px;
+      margin-bottom: 15px;
+    }
+    h2{
+      font-size: 1.875rem;
+      font-family: var(--font-family-base);
+      margin-bottom: 15px;
+    }
+    p{
+      font-size: 1rem;
+      line-height: 30px;
+      color: var(--color-grey-800);
+    }
+    .promo-image-container{
+      max-width: 350px;
+      height:250px;
+      width: 80%;
+      box-shadow: 0 0.3rem 1rem rgba(0, 0, 0, 0.15);
+      padding:50px;
+      display: inline-block;
+      border-radius: 4px;
+      background: #fff;
+      text-align: center;
+      img{
+        width:100%;
+        height: 100%;
+        object-fit: contain;
+      }
+      i{
+        font-size: 140px;
+        color: var(--color-primary);
+      }
+    }
+  }
+  section.breaker{
+    margin:0 0 50px 0;
+  }
+}
+
+@media (max-width: 767px) {
+  main.promo_claim_home{
+
+    section.promo-section{
+      padding:50px 15px;
+      h2{
+        font-size: 22px;
+      }
+      .promo-image-container{
+        margin-top:30px;
+        height:150px;
+        padding:10px;
+        max-width: 300px;
+        box-shadow: none;
+        background: transparent;
+      }
+    }
+    section.breaker{
+      margin: 0 0 50px 0;
+    }
+
+  }
+}

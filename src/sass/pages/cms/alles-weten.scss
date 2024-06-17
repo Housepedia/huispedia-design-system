@@ -1,0 +1,28 @@
+// base
+@import 
+'../../base/hp-body',
+'../../base/hp-modal';
+
+// components
+@import 
+'../../components/feedback',
+'../../components/social-share';
+
+// CMS
+@import 
+'../../pages/cms/components/card-category',
+'../../pages/cms/components/card-row',
+'../../pages/cms/components/card-related',
+'../../pages/cms/components/search';
+
+.hp-header-alles-weten-category {
+  background-image: url('/img/pages/headers/header-alles-weten-categorie.jpg');
+  background-size: cover;
+  background-position: center;  
+}
+
+.hp-header-alles-weten-landing {
+  background-image: url('/img/pages/headers/header-alles-weten-landing.jpg');
+  background-size: cover;
+  background-position: center;  
+}

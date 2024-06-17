@@ -1,0 +1,14 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to super admin style (site owner views)
+// -----------------------------------------------------------------------------
+
+// 1. Configuration and helpers
+@import
+'abstracts/variables',
+'abstracts/functions',
+'abstracts/mixins';
+
+// 2. Website admin styles
+@import
+  'pages/admin/admin-dashboard',
+  'pages/property/huispedia-admin-panel';

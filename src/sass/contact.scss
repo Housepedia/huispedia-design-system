@@ -1,0 +1,89 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the help & contact page
+// -----------------------------------------------------------------------------
+
+// 1. Configuration and helpers
+@import
+'abstracts/variables',
+'abstracts/functions',
+'abstracts/mixins';
+
+#accordion{
+  max-width: 750px;
+  .card{
+    margin:10px 0;
+    border-radius: 5px;
+    &:hover{
+      border-color: var(--color-grey-400);
+    }
+    .card-header{
+      background: #fff;
+      border-bottom: none;
+      padding:0;
+      border-radius: 5px;
+      h5{
+        button{
+          padding: 20px;
+          width: 100%;
+          text-align: left;
+          text-decoration: none !important;
+          .contact-icon{
+            width: 24px;
+            color: var(--color-primary-light);
+          }
+        }
+      }
+    }
+    .card-body{
+      padding: 0 20px 20px 20px;
+      line-height: 26px;
+      font-size:0.9125rem;
+    }
+
+  }
+}
+section#help-section-map #map-canvas{
+  border-radius: 10px;
+  overflow: hidden;
+  height:550px;
+  max-height: 70vh;
+  .map-marker-home-main {
+    background-image: url(/img/maps/marker_huispedia.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 50px;
+    height: 65px;
+    position: relative;
+    z-index: 1000;
+  }
+}
+
+section#help-section-address{
+  h3{
+    font-size:1.1rem;
+    font-weight: 500;
+  }
+}
+
+@media (max-width: 767px) {
+  section#help-section-map #map-canvas {
+    height: 220px;
+    max-height: 50vh;
+  }
+  #accordion{
+    .card{
+      .card-header{
+        h5{
+          button{
+            padding: 10px;
+            font-size: 14px;
+          }
+        }
+      }
+      .card-body{
+        padding: 0 10px 10px 10px;
+        line-height: 24px;
+      }
+    }
+  }
+}

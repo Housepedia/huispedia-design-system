@@ -1,0 +1,8 @@
+[data-accordion-collapse] {
+  height: 0;
+  width: calc(100% + 1rem);
+  margin: 0 -.5rem;
+  padding: 0 .5rem;
+  overflow: hidden;
+  transition: ease-out all .3s;
+}

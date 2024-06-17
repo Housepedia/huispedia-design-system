@@ -1,21 +1,39 @@
 {
   "name": "huispedia-design-system",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
+  "version": "1.0.6",
+  "main": "./dist/huispedia-design-system.umd.js",
+  "module": "./dist/huispedia-design-system.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/huispedia-design-system.es.js",
+      "require": "./dist/huispedia-design-system.umd.js"
+    },
+    "./dist/index.css": {
+      "import": "./dist/index.css",
+      "require": "./dist/index.css"
+    }
+  },
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "test-storybook": "test-storybook",
-    "build-storybook-docs": "storybook build  --docs"
+    "build-storybook-docs": "storybook build  --docs",
+    "test": "jest"
   },
   "dependencies": {
+    "@tailwindcss/aspect-ratio": "^0.4.2",
+    "bootstrap": "^5.3.3",
     "vue": "^3.4.21"
   },
   "devDependencies": {
+    "@babel/core": "^7.24.7",
+    "@babel/plugin-transform-runtime": "^7.24.7",
+    "@babel/preset-env": "^7.24.7",
+    "@babel/preset-typescript": "^7.24.7",
     "@chromatic-com/storybook": "^1.5.0",
     "@storybook/addon-a11y": "^8.1.8",
     "@storybook/addon-coverage": "^1.0.4",
@@ -23,13 +41,24 @@
     "@storybook/addon-interactions": "^8.1.6",
     "@storybook/addon-links": "^8.1.6",
     "@storybook/blocks": "^8.1.6",
+    "@storybook/builder-vite": "^8.1.8",
     "@storybook/test": "^8.1.6",
     "@storybook/test-runner": "^0.18.2",
+    "@storybook/testing-library": "^0.2.2",
     "@storybook/vue3": "^8.1.6",
     "@storybook/vue3-vite": "^8.1.6",
     "@vitejs/plugin-vue": "^5.0.4",
+    "@vue/vue3-jest": "^29.2.6",
+    "autoprefixer": "^10.4.19",
+    "babel-jest": "^29.7.0",
     "chromatic": "^11.5.3",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
+    "postcss": "^8.4.38",
+    "sass": "^1.77.5",
+    "sass-loader": "^14.2.1",
     "storybook": "^8.1.6",
+    "tailwindcss": "^3.4.4",
     "vite": "^5.2.0"
   }
 }

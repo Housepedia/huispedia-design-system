@@ -1,0 +1,286 @@
+
+$imageSizeSmall: 220px;
+$imageSize: 280px;
+@import '../abstracts/hp-colors';
+
+.quote,
+.hp-quote {
+    display: grid;
+    grid-template-areas: "A" "B";
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    text-align: left;
+
+    &-slider {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &-images {
+        width: 100%;
+        height: calc(#{$imageSizeSmall} + 1rem);
+        position: relative;
+    }
+
+    &-image {
+        grid-area: B;
+        flex-shrink: 0;
+        position: relative;
+        width: $imageSizeSmall;
+        height: calc(#{$imageSizeSmall} + 1rem);
+        margin: 0 auto;
+        position: relative;
+        animation: forwards ease-out animateIn .8s;
+
+        figure {
+          position: absolute;
+          z-index: 1;
+          width: $imageSizeSmall;
+          height: $imageSizeSmall;
+          background-size: calc(100% + 1rem);
+          background-position: center top;
+
+          &:nth-child(1) {
+            clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
+            z-index: 2;
+          }
+
+          &:nth-child(2) {
+            border-radius: calc(#{$imageSizeSmall} / 2);
+            margin-top: 1rem;
+            background-position: center -1rem;
+          }
+        }
+    }
+
+    &-text {
+        grid-area: B;
+        padding-left: 1rem;
+        margin: 0;
+
+        blockquote {
+            font-size: 1.125rem;
+            &:before {
+                content: '\201C';
+                color: var(--color-primary);
+                margin-left: -1rem;
+                display: inline-block;
+                width: .75rem;
+            }
+            &:after {
+                content: '\201D';
+                color: var(--color-primary);
+            }
+        }
+    }
+
+    &-author {
+        font-size: 1rem;
+
+        span {
+
+            &:nth-child(1) {
+                font-weight: 700;
+            }
+        }
+    }
+
+    &-indicators {
+        display: flex;
+        gap: .5rem;
+        padding: 0;
+        margin: 0;
+
+        .bullet {
+            width: .5rem;
+            height: .5rem;
+            display: inline-block;
+            border-radius: 50%;
+            background: #000;
+            opacity: .2;
+
+            &.current {
+                background: var(--color-primary);
+                opacity: 1;
+            }
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    .quote,
+    .hp-quote {
+        grid-template-areas: "A B";
+        grid-template-columns: auto #{$imageSize};
+        justify-content: flex-start;
+        gap: 4rem;
+
+        &-small {
+            max-width: 992px;
+            margin: 0 auto;
+            grid-template-columns: auto calc((#{$imageSize} * 0.8));
+
+            .quote-text {
+                blockquote {
+                    font-size: 1.25rem;
+                }
+            }
+
+            .quote-images {
+                height: calc((#{$imageSize} * 0.8) + 1rem);
+                width: calc((#{$imageSize} * 0.8));
+            }
+
+            .quote-image {
+                height: calc((#{$imageSize} * 0.8) + 1rem);
+                width: calc((#{$imageSize} * 0.8));
+
+                &:after {
+                    width: calc((#{$imageSize} * 0.8));
+                    height: calc((#{$imageSize} * 0.8));
+                }
+
+                figure {
+                    width: calc((#{$imageSize} * 0.8));
+                    height: calc((#{$imageSize} * 0.8));
+
+                    &:nth-child(2) {
+                        border-radius: calc((#{$imageSize} * 0.8) / 2);
+                    }
+                }
+            }
+        }
+
+        &-slider {
+            grid-area: B;
+        }
+
+        &-images {
+            height: calc(#{$imageSize} + 1rem);
+        }
+
+        &-image {
+            margin: 0;
+            width: $imageSize;
+            height: calc(#{$imageSize} + 1rem);
+
+            &:after {
+                width: $imageSize;
+                height: $imageSize;
+            }
+
+            figure {
+                width: $imageSize;
+                height: $imageSize;
+
+
+                &:nth-child(2) {
+                  border-radius: calc(#{$imageSize} / 2);
+                }
+            }
+        }
+
+        &-text {
+            grid-area: A;
+            margin: 1rem 0 0 0;
+            padding-left: 1.5rem;
+
+            blockquote {
+                font-size: 2.125rem;
+
+                &:before {
+                    width: 1rem;
+                    margin-left: -1.5rem;
+                }
+            }
+        }
+
+        &-author {
+            font-size: 1.125rem;
+        }
+    }
+}
+
+@keyframes animateIn {
+    0% {opacity: 0%; transform: translateY(-.5rem)}
+    100% {opacity: 100%; transform: translateY(0)}
+}
+
+.hp-quote-mini {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    max-width: 400px;
+    margin: 0 auto;
+    background: var(--color-slate-100);
+    padding: 1rem;
+    border-radius: .5rem;
+
+    &-text{
+        @extend .hp-quote-text;
+
+        blockquote {
+            font-size: 1.125rem;
+        }
+    }
+
+    &-image {
+        flex-basis: 120px;
+        flex-grow: 0;
+        flex-shrink: 0;
+        height: 120px;
+        width: 120px;
+
+        figure {
+            margin: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            border-radius: 100%;
+        }
+    }
+
+    &-name {
+        font-weight: 600;
+    }
+}
+
+@media (min-width: 768px) {
+    .hp-quote-mini {
+        gap: 1rem;
+        padding: 0;
+        background: transparent;
+
+        &-text {
+            padding: 0 .5rem;
+            margin-top: .5rem;
+
+            blockquote {
+                font-size: 1rem;
+
+                &:before {
+                    width: .25rem;
+                    margin-left: -.5rem;
+                }
+
+                &:after {
+                    width: .25rem;
+                    margin-right: -.5rem;
+                }
+            }
+
+            .hp-quote-mini-author {
+                font-size: .875rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,18 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the search page
+// -----------------------------------------------------------------------------
+
+// 1. Configuration and helpers
+@import
+  'abstracts/variables',
+  'abstracts/functions',
+  'abstracts/mixins';
+
+// 2. Search page styles
+@import
+  'pages/search/base',
+  'pages/search/search_filter',
+  'pages/search/search_filter_menu',
+  'pages/search/search_list',
+  'pages/search/search_map',
+  'pages/search/search_map_property_card';

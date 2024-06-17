@@ -1,0 +1,101 @@
+// base
+@import 
+'../../base/hp-body',
+'../../base/hp-modal';
+
+// components
+@import 
+'../../components/feedback',
+'../../components/social-share';
+
+// CMS
+@import 
+'../../pages/cms/components/card-blog',
+'../../pages/cms/components/card-related',
+'../../pages/cms/components/card-row',
+'../../pages/cms/components/search';
+
+.hp-grid-blog {
+  display: grid;
+  gap: 2rem;
+}
+
+@media (min-width: 640px) {
+  .hp-grid-blog {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+
+  
+    > *:nth-of-type(1) {
+      grid-column: 1 / span 2;
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .hp-grid-blog {
+    grid-template-columns: repeat(3, 1fr);
+  
+    > *:nth-of-type(1) {
+      grid-column: 1 / span 3;
+      
+      .hp-placeholders {
+        
+
+        span {
+          &:nth-child(3) {
+            margin-bottom: 2rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media(min-width: 1200px) {
+  .hp-grid-blog {
+    gap: 3rem;
+  }
+}
+
+.hp-branding-image {
+  display: grid;
+  gap: 1rem;
+
+  .hp-branding-image-preview {
+
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    border-radius: .5rem;
+    border: 1px solid var(--color-grey-200);
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  dl {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: .5rem;
+  }
+
+  dd,
+  dt {
+    margin: 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hp-branding-image {
+    max-width: 218px;
+    max-height: 218px;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+  }
+}

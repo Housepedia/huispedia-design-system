@@ -1,0 +1,137 @@
+@import '../abstracts/hp-colors';
+
+[class*="alert-inline"],
+[class^="hp-alert-inline"] {
+    font-size: .9rem;
+    transition: ease-out all .3s;
+    height: 0;
+    overflow: hidden;
+
+    a {
+        
+        &:hover {
+            text-decoration: underline!important;
+        }
+    }
+
+    > * {
+        display: block;
+        background-color: #ececec;
+        border: 1px solid rgb(202, 202, 202);
+        margin: 1rem 0 0 0;
+        padding: .25rem .5rem;
+        opacity: 0;
+    }
+
+    &.active {
+
+        > * {
+            opacity: 1;
+        }
+    }
+}
+
+[class^="alert-compact"],
+[class^="hp-alert-compact"] {
+    font-size: .8rem;
+    transition: ease-out all .3s;
+    height: 0;
+    overflow: hidden;
+
+    > * {
+        display: block;
+        margin: .25rem 0 0 0;
+        opacity: 0;
+    }
+
+    &.active {
+
+        > * {
+            opacity: 1;
+        }
+    }
+}
+
+.alert-inline-error, 
+.hp-alert-inline-error {
+
+    a {
+        color: var(--color-error);
+    }
+
+    > * {
+        background-color: rgba(var(--color-error), 0.05);
+        border: 1px solid rgba(var(--color-error), 0.25);
+    }
+}
+
+.alert-compact-error,
+.hp-alert-compact-error {
+
+    > * {
+        color: var(--color-error);
+    }
+}
+
+.alert-compact-warning,
+.hp-alert-compact-warning {
+
+    a {
+        color: $color-warning;
+    }
+
+    > * {
+        color: $color-warning;
+    }
+}
+
+.alert-compact-success,
+.hp-alert-compact-success {
+
+    a {
+        color: $color-success;
+    }
+
+    > * {
+        color: $color-success;
+    }
+}
+
+.alert-compact-regular,
+.hp-alert-compact-regular {
+
+    a {
+        color: var(--color-grey-800);
+    }
+
+    > * {
+        color: var(--color-grey-800);
+    }
+}
+
+.alert-inline-error,
+.hp-alert-inline-error {
+
+    > * {
+        background-color: rgba(var(--color-error), 0.1);
+        border: 1px solid rgba(var(--color-error), 0.5);
+    }
+}
+
+.alert-inline-warning,
+.hp-alert-inline-warning {
+
+    > * {
+        background-color: rgba($color-warning, 0.1);
+        border: 1px solid rgba($color-warning, 0.5);
+    }
+}
+
+.alert-inline-success,
+.hp-alert-inline-success {
+
+    > * {
+        background-color: rgba($color-success, 0.05);
+        border: 1px solid rgba($color-success, 0.25);
+    }
+}

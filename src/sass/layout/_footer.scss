@@ -1,0 +1,59 @@
+.hp-footer-breadcrumbs {
+  font-size: .875rem;
+  display: grid;
+  gap: 1rem;
+
+  .hp-breadcrumbs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem;
+  }
+
+  .breadcrumb-title {
+    display: block;
+    white-space: nowrap;
+    font-weight: 500;
+
+  }
+
+  ol {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    gap: .5rem;
+    flex-grow: 1;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  li {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+
+    &:not(:last-child):after {
+      content: url('data:image/svg+xml; utf8, <svg xmlns="http://www.w3.org/2000/svg" height=".5rem" viewBox="0 0 320 512"><!--! Font Awesome Pro 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M305 239c9.4 9.4 9.4 24.6 0 33.9L113 465c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l175-175L79 81c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0L305 239z"/></svg>');
+      display: block;
+      width: 5px;
+      height: 21px;
+    }
+  }
+}
+
+.hp-footer-grid {
+  display: grid;
+}
+
+@media (min-width: 992px) {
+  .hp-footer-grid {
+    grid-template-columns: repeat(auto 1fr 1fr 1fr);
+    grid-template-rows: auto;
+    grid-template-areas:
+      "col1 col2 col3"
+      "col4 col5 col6";
+  }
+}

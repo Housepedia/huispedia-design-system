@@ -1,0 +1,25 @@
+// Base
+@import 
+'../../abstracts/hp-colors',
+'../../base/hp-utils',
+'../../base/hp-buttons',
+'../../base/hp-inputs',
+'../../base/hp-swiper',
+'../../base/hp-tabs',
+'../../components/quote',
+'../../components/accordion',
+'../../layout/hp-content',
+'../../base/hp-quote';
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+.hp-swiper-report {
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    color: var(--color-primary);
+  }
+}

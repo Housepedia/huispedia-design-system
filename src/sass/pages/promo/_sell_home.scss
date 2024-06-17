@@ -1,0 +1,170 @@
+main.promo_sell_home {
+  background: var(--color-slate-100);
+  padding-bottom: 0;
+  .card {
+    border: none;
+    box-shadow: #d1d1d5 0 0 4px;
+    .card-title {
+      font-size: 24px;
+    }
+    .card-body {
+      flex: 1 1 auto;
+      padding: 1.5rem;
+    }
+    &#card-bottom {
+      flex: 100%;
+      margin-top: 30px;
+      .card-body {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        .text-left {
+          flex: 50%;
+        }
+
+        .text-right {
+          flex: 50%;
+
+          div {
+            display: flex;
+            justify-content: center;
+
+            img {
+              width: 280px;
+              height: auto;
+              padding: 20px;
+              margin: 0 auto;
+            }
+          }
+        }
+        img {
+          max-height: 350px;
+          width: 100%;
+          max-width: 800px;
+        }
+        svg {
+          max-height: 350px;
+          width: 100%;
+          max-width: 800px;
+        }
+      }
+    }
+    &#card-left {
+      flex: 1 0 15%;
+    }
+    .card-footer {
+      background: #fff;
+      border-top: none;
+      padding: 0 1.25rem 1.25rem 1.25rem;
+    }
+  }
+
+  .card-bottom-container {
+    max-width: 700px;
+    text-align: left;
+    display: inline-block;
+    position: relative;
+    base .input-group {
+      input {
+        border-right: none;
+      }
+      .input-group-text {
+        border-left: none;
+        background: #fff;
+      }
+    }
+  }
+  section.breaker-simple {
+    padding-top: 100px;
+    h2 {
+      font-weight: 400;
+    }
+  }
+}
+header#realtorNeedTestHeader{
+  min-height: 240px;
+  background: #25315A;
+  color:#fff;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding:30px 20px;
+  transition: all 0.3s ease-out;
+  h1{
+    font-size: 2.2rem;
+    transition: all 0.3s;
+    margin-bottom:0;
+  }
+  h2{
+    font-size: 1.8rem;
+    transition: all 0.3s;
+  }
+  &.small{
+    min-height: 0;
+    h1{
+      font-size: 1.4rem;
+    }
+    h2{
+      font-size: 1.2rem;
+    }
+  }
+}
+@media (max-width: 767px) {
+  header#realtorNeedTestHeader{
+    min-height: 140px;
+    padding:16px;
+    h1{
+      font-size:1.1rem;
+    }
+    h2{
+      font-size: 1rem;
+    }
+    &.small{
+      min-height: 0;
+      h1{
+        font-size: 1.1rem;
+      }
+      h2{
+      display:none;
+      }
+    }
+  }
+  main.promo_sell_home {
+    padding-bottom: 50px;
+    .card {
+      &#card-bottom {
+        margin-top: 15px;
+        .card-body {
+          img {
+            max-height: 350px;
+            width: 100%;
+          }
+        }
+      }
+      .card-body {
+        .card-title {
+          font-size: 20px;
+        }
+      }
+      img.card-image {
+        max-width: 100px;
+        height: 170px;
+      }
+    }
+    .card-bottom-container {
+      .card {
+        img.card-image {
+          max-width: none;
+        }
+      }
+    }
+    section.breaker {
+      padding-top: 50px;
+    }
+    section.breaker-simple {
+      padding-top: 30px;
+      max-width: 300px;
+    }
+  }
+}

@@ -1,0 +1,26 @@
+@import
+'abstracts/hp-colors',
+'abstracts/hp-weights',
+'base/hp-buttons',
+'base/hp-utils',
+'base/hp-inputs',
+'base/hp-stickers',
+'base/cards/hp-card-compare',
+'base/_hp-loading.scss',
+'base/_hp-headings.scss',
+'base/_hp-swiper.scss',
+'base/_hp-modal.scss',
+'base/hp-tabs',
+'base/hp-huispediaplus',
+'components/accordion',
+'base/hp-blocks';
+
+@import 'abstracts/variables';
+@import "pages/property/header";
+@import "pages/property/title";
+@import "pages/property/nav_affix";
+@import "pages/property/features";
+@import "pages/property/valuation";
+@import "pages/property/finance_widget";
+@import "pages/property/hood_info";
+@import "pages/property/base";

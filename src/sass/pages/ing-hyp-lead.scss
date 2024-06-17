@@ -1,0 +1,141 @@
+$color-ing-primary: #ff6200;
+$color-ing-secondary: #559BD1;
+
+#ing-hype-background{
+  background:#f8f8f8;
+}
+header{
+  background: url('/img/pages/campaigns/ing/ing_header.jpg') top center no-repeat;
+  background-size: cover;
+  background-position-y: -50px;
+  min-height: 450px;
+  overflow: hidden;
+  position: relative;
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    pointer-events: none;
+    background: mix(#5E7CE2,#000,80%);
+    transition: opacity 0.4s linear;
+    opacity: 1;
+  }
+  &.show{
+    &:before {
+      opacity: 0.9;
+    }
+  }
+  h1{
+    font-family: "Poppins",sans-serif;
+    color: #fff;
+    font-size: 42px;
+    line-height: 52px;
+    letter-spacing: 1.3px;
+    margin-top:30px;
+  }
+  h2{
+    font-family: "Poppins",sans-serif;
+    color: #fff;
+    font-weight: 400;
+    display: inline-block;
+    font-size: 1.8rem;
+    line-height: 1.4;
+    margin-top:20px;
+    max-width: 800px;
+  }
+}
+.btn-ing-secondary {
+  display: inline-block;
+  border: 1px solid $color-ing-secondary;
+  background: $color-ing-secondary;
+  transition: all .2s;
+  color: #FFF;
+  font-weight: 400;
+  text-align: center;
+  font-size: 19px;
+  line-height: 1.3;
+  border-radius: 5px;
+  padding:9px 16px;
+  &:hover {
+    background: #FFF;
+    border: 1px solid $color-ing-secondary;
+    color: $color-ing-secondary;
+  }
+}
+#ing-hype-checks-section{
+  margin-top:-130px;
+  font-size: 1.2rem;
+  h3{
+    font-family: "Poppins",sans-serif;
+    font-size: 1.3rem;
+  }
+  ul{
+    list-style: none;
+    margin:0;
+    padding:0;
+  }
+}
+#ing-hyp-lead-section{
+  h1{
+    font-size:1.4rem;
+    font-family: "Poppins",sans-serif;
+  }
+  p.alt-text{
+    font-size:1.2rem;
+  }
+}
+#privacy-statement{
+  max-width: 360px;
+  margin:0 auto;
+  position: relative;
+}
+.checkbox-filter + .checkbox-filter-label:before {
+  border-color: $color-ing-primary;
+}
+.checkbox-filter:checked + .checkbox-filter-label:before {
+  color:$color-ing-primary;
+  background: #fff;
+  border-color: $color-ing-primary;
+}
+.form-explain-text{
+  margin-top:6px;
+  display: block;
+  color: var(--color-grey-600);
+}
+@media all and (max-width: 768px) {
+  #ing-hype-background{
+    background:#fff;
+  }
+  header{
+    min-height: 270px;
+    background-position-y: 0;
+    h1{
+      font-size: 1.3rem;
+      line-height: 1.3;
+      margin-top: 0;
+    }
+    h2{
+      font-size:1.1rem;
+    }
+  }
+  #ing-hype-checks-section{
+    margin-top:0;
+    font-size: 1rem;
+    h3{
+      font-size:1.1rem;
+    }
+  }
+  #ing-hyp-lead-section{
+    h1{
+      font-size:1.2rem;
+    }
+    p.alt-text{
+      font-size:1.1rem;
+    }
+  }
+}

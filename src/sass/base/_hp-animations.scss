@@ -1,0 +1,75 @@
+.hp-a-max-height {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.5s cubic-bezier(0, 1, 0, 1);
+
+  &.hp-ready {
+    max-height: 1000px;
+    transition: max-height 1s ease-in-out;
+  }
+}
+
+// Animation payment
+
+$coins-timing: 3.5s;
+$coins-drag-size: 10rem;
+$coins-coin-size: 4rem;
+$coins-timing-function: ease-out;
+
+.hp-coins-animation {
+  position: relative;
+  width: calc(#{$coins-drag-size} + #{$coins-coin-size});
+  height: $coins-coin-size;
+ // opacity: 0;
+}
+
+.hp-coins-animation-coin-container {
+  transform-origin: center center;
+  position: relative;
+  z-index: 1;
+
+}
+
+.hp-coins-animation img {
+  transform-origin: center center;
+  transform: rotate(-20deg);
+  width: #{$coins-coin-size};
+}
+
+.hp-coins-animation-drag {
+  width: $coins-coin-size;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: var(--color-slate-100);
+  border-radius: calc(#{$coins-coin-size} / 2);
+}
+
+.hp-pulse-animation {
+  animation: animationPulse 0.5s ease-in forwards;
+}
+
+@keyframes animationPulse {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+
+  50% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+
+  70% {
+    transform: scale(1);
+  }
+
+  90% {
+    transform: scale(1.1);
+  }
+  
+  100% {
+    transform: scale(1);
+  }
+}

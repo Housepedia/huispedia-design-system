@@ -1,0 +1,422 @@
+nav#main-navbar{
+  border:none;
+}
+header {
+  position: relative;
+  background-size: cover;
+  background-position: center center;
+  min-height:450px;
+  width: 100%;
+
+  h1{
+    color:#FFF;
+    font-size: 42px;
+    line-height: 52px;
+  }
+  h2{
+    color: var(--color-grey-600);
+    font-size:22px;
+    line-height: 34px;
+    padding:0;
+    margin:0 auto;
+  }
+  label{
+    color:#fff;
+  }
+  .header-icon{
+    width:60%;
+    max-width: 250px;
+    height:auto;
+    max-height: 250px;
+    fill:rgba(255,255,255,0.7);
+  }
+
+
+}
+section.campaign-section{
+  position: relative;
+  min-height: 200px;
+  padding:70px 0;
+  background: #fff;
+  &.bg-grey{
+    background: var(--color-slate-100);
+  }
+  h2{
+    text-align: center;
+    font-size: 28px;
+    margin: 0;
+  }
+}
+.explain-items{
+  .icon-explain-numb{
+    font-size:40px;
+    color: var(--color-primary);
+    margin:60px 0 20px 0;
+  }
+  p{
+    max-width: 260px;
+    display: inline-block;
+  }
+}
+
+
+
+.makelaar-form-col{
+  padding:15px;
+  min-height: 400px;
+}
+.form-container{
+  padding:30px 0;
+}
+#makelaar-types{
+  min-height: 160px;
+  position: relative;
+}
+
+
+.f1 {
+  padding: 25px; background: #fff;
+  -moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px;
+}
+.f1 h3 { margin-top: 0; margin-bottom: 5px; text-transform: uppercase; }
+
+.f1-steps { overflow: hidden; position: relative; margin-top: 20px; }
+
+.f1-progress { position: absolute; top: 24px; left: 0; width: 100%; height: 1px; background: #ddd; }
+.f1-progress-line { position: absolute; top: 0; left: 0; height: 1px; background: #5e7ce2; transition: all 0.2s;
+}
+
+.f1-step { position: relative; float: left; width: 25%; padding: 0 5px;text-align: center; }
+
+.f1-step-icon {
+  display: inline-block; width: 40px; height: 40px; margin-top: 4px; background: #ddd;
+  font-size: 16px; color: #fff; line-height: 40px;
+  -moz-border-radius: 50%; -webkit-border-radius: 50%; border-radius: 50%;
+  transition: all 0.3s;
+}
+.f1-step.activated .f1-step-icon {
+  background: #5e7ce2; border: 1px solid #5e7ce2; color: #5e7ce2; line-height: 38px;
+}
+.f1-step.active .f1-step-icon {
+  width: 48px; height: 48px; margin-top: 0; background: #5e7ce2; font-size: 22px; line-height: 48px;
+}
+
+.f1-step p { color: #ccc; }
+.f1-step.activated p { color: #5e7ce2; }
+.f1-step.active p { color: #5e7ce2; }
+
+.f1 fieldset { display: none; text-align: left; }
+
+.f1-buttons { text-align: right; }
+
+.f1 .input-error { border-color: #5e7ce2; }
+.hsp-panel-minimal{
+  max-width: 800px;
+  width:100%;
+  margin:0 auto;
+  z-index: 2;
+  border-radius: 4px;
+
+
+}
+.hsp-panel-minimal #affiliateform{
+  height:300px;
+  overflow-y:scroll;
+}
+.btn-makelaar-option{
+  width:180px;
+  padding:10px;
+  border: none;
+  border-radius: 10px;
+  color:#FFF;
+  font-size:20px;
+  text-align: center;
+  box-shadow: 0 7px 15px rgba(0, 9, 128, 0.05), 0 12px 28px rgba(0, 9, 128, 0.075);
+  transition: all 0.2s;
+  line-break: auto;
+  white-space: unset;
+}
+.btn-makelaar-option.back2 {
+  background: -moz-linear-gradient(45deg, #19d9b4 0%, #92d275 100%);
+  background: linear-gradient(45deg, #19d9b4 0%, #92d275 100%);
+}
+.btn-makelaar-option.back3 {
+  background: -moz-linear-gradient(45deg, #fe60a1 0%, #ff8765 100%);
+  background: linear-gradient(45deg, #fe60a1 0%, #ff8765 100%);
+}
+.btn-makelaar-option:hover{
+  box-shadow: 0 7px 15px rgba(0, 9, 128, 0.1), 0 12px 28px rgba(0, 9, 128, 0.15);
+}
+#makelaar-form, #widget{
+
+}
+.coop{
+  font-size: 14px;
+  color:#bbb;
+  margin-top:20px;
+}
+
+#affiliateform{
+  min-height: 160px;
+}
+#offertes09032018{
+  font-family: 'Poppins', sans-serif !important;
+  line-height: 1.6 !important;
+}
+#offertes09032018 .btn-primary.btn.btn-next {
+  background: #fe5f55!important;
+  color: #fff;
+  padding: 10px 40px;
+  width: auto !important;
+}
+#offertes09032018 .btn-primary.btn.btn-next:hover {
+  background: #f35c52 !important;
+  color: #fff;
+}
+#offertes09032018 .radio-group label.active:before {
+  background: #5e7ce2 !important;
+}
+#offertes09032018 .radio-group label:after{
+  display: none !important;
+}
+#offertes09032018 .radio-group label:before {
+  content: '' !important;
+  background: #fff !important;
+  border: 1px solid #d2d2d2 !important;
+  border-radius: 50% !important;
+  display: inline-block !important;
+  vertical-align: middle !important;
+  width: 16px !important;
+  height: 16px !important;
+  margin-right: 2px !important;
+  top: 8px !important;
+  margin-bottom: 2px !important;
+  text-align: center !important;
+}
+#offertes09032018 .step legend{
+  display:none;
+}
+#offertes09032018 .step legend {
+  border-bottom: none !important;
+}
+#offertes09032018 fieldset p.success {
+  margin-top: 5px!important;
+  font-size: 16px !important;
+  line-height: 26px !important;
+  padding: 0;
+}
+#offertes09032018 fieldset strong.success {
+  font-size: 16px !important;
+  font-weight: 700 !important;
+  margin-top: 20px !important;
+  margin-bottom: 0 !important;
+  display: block;
+}
+.loader-overlay{
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top:0;
+  bottom:0;
+  right:0;
+  left:0;
+  z-index: 10;
+  background: rgba(255,255,255,1);
+  opacity: 1;
+  transition: opacity 0.2s ease-in 0.5s;
+  overflow:hidden;
+}
+.loader-overlay.hideIt{
+  opacity:0;
+  pointer-events: none;
+
+}
+.circle-loader,
+.circle-loader:after {
+  border-radius: 50%;
+  width: 75px;
+  height: 75px;
+}
+
+.circle-loader {
+  display: inline-block;
+  font-size: 10px;
+  text-indent: -9999em;
+  border-top: 1px solid rgba(94, 124, 226, 0.2);
+  border-right: 1px solid rgba(94, 124, 226, 0.2);
+  border-bottom: 1px solid rgba(94, 124, 226, 0.2);
+  border-left: 1px solid #5e7ce2;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-animation: load8 1.1s infinite linear;
+  animation: load8 1.1s infinite linear;
+}
+@-webkit-keyframes load8 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes load8 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+a.populair-places-link{
+  display: inline-block;
+  width: 100%;
+}
+a.populair-places-link .img-container{
+  padding-top:62%;
+  display: block;
+  position: relative;
+  background: #F6f6f6;
+}
+a.populair-places-link .img-container img{
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+a.populair-places-link .title{
+  font-size: 22px;
+  line-height: 40px;
+  color: var(--color-grey-800);
+}
+a.populair-places-link:hover .title{
+  text-decoration: underline!important;
+}
+.multiselect-container > li{
+  &.active{
+    background: mix(var(--color-tertiary),#fff,30%);
+  }
+  >a {
+    > label {
+      padding: 5px 10px !important;
+    }
+  }
+}
+.nav-pills .nav-link {
+    padding: 0.5rem 8px;
+    cursor: default;
+    color: var(--color-grey-600);
+  &:hover{
+    color: var(--color-grey-600);
+  }
+  &:before {
+    display: block;
+    content: "\f00c";
+    font-family: 'Font Awesome 5 Pro';
+    font-weight: 900;
+    color: #eee;
+    font-size: 18px;
+  }
+  &.completed, &.active{
+    cursor: pointer;
+    &:hover{
+      color: var(--color-tertiary);
+    }
+  }
+  &.completed:before{
+    color: #5ff345;
+  }
+}
+  @media (max-width: 768px) {
+    header {
+      min-height: 150px;
+      padding:32px 0;
+      text-align: center;
+    }
+    header h1 {
+      padding: 0 0 20px 0;
+      font-size: 22px;
+      line-height: 30px;
+    }
+    .btn-makelaar-option{
+      margin-bottom: 20px;
+      width: auto;
+      min-width: 300px;
+    }
+    section h2 {
+      color: var(--color-grey-800);
+      font-size: 18px;
+      margin-top: 0;
+      line-height: 24px;
+      padding: 0 ;
+    }
+    section.grey {
+      margin-top:0;
+    }
+    .section-explain {
+      padding: 50px 0;
+      color: var(--color-grey-800);
+    }
+    .section-explain p {
+      line-height: 1.65;
+      font-size: 15px;
+      padding: 0 15% 20px 15%;
+    }
+    .icon-explain-numb {
+      width: 70px;
+      height: 70px;
+      line-height: 70px;
+      margin: 20px 0 10px 0;
+    }
+    .icon-explain-numb span{
+      line-height: 34px;
+      font-size: 20px;
+    }
+    .icon-explain-numb img {
+      display: inline-block;
+      width: 30px;
+      height: 30px;
+    }
+    #affiliateform {
+      min-height: 300px;
+    }
+    #makelaar-form{
+      background:#FFF;
+      padding: 0;
+      margin-top:0;
+      border-radius:0;
+      box-shadow: none
+    }
+    .makelaar-form-col{
+      padding-left:30px;
+      padding-right:30px;
+    }
+    .section-explain h3{
+      margin-top:10px;
+    }
+    h2, .h2, section.campaign-section h2 {
+      font-size: 1.25rem;
+    }
+    #wle_vergelijker, #wli_vergelijker{
+      position: relative!important;
+    }
+    section.campaign-section {
+      padding: 32px 0;
+    }
+    .nav-pills .nav-link:before {
+      display: inline-block;
+      float: right;
+      font-size: 12px;
+      line-height: 26px;
+    }
+}

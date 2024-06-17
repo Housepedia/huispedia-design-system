@@ -1,0 +1,396 @@
+// components
+@import 
+'../../components/loaders',
+'../../pages/cms/components/card-related',
+'../../base/hp-modal',
+'../../base/hp-animations',
+'../../base/hp-loading';
+
+.hp-payment-grid {
+  display: grid;  
+}
+
+.v-app-payment {
+  min-height: 495px;
+}
+
+@media (min-width: 992px) {
+
+  .v-app-payment {
+    min-height: 403px;
+  }
+
+  .hp-payment-grid {
+    grid-template-areas: "A B" "C B";
+    grid-template-columns: 50% 50%;
+    min-height: calc(100% - 74px);
+    padding-left: 1rem;
+    position: relative;
+
+    > :nth-child(1) {
+      grid-area: A;
+      position: relative;
+      z-index: 1;
+    }
+
+    > :nth-child(2) {
+      grid-area: B;
+      position: relative;
+      z-index: 1;
+      overflow: hidden;
+
+      > * {
+        position: relative;
+        z-index: 2;
+      
+      }
+
+      &:after {
+        content: '';
+        width: 100%;
+        height: calc(100% + 8rem);
+        position: absolute;
+        top: -4rem;
+        bottom: -4rem;
+        left: 0;
+        background: transparent;
+        box-shadow: inset 0px 4px 16px rgba(0, 0, 0, 0.05), inset 0px 8px 32px rgba(0, 0, 0, 0.05);
+      }
+    }
+
+    > :nth-child(3) {
+      grid-area: C;
+      align-self: flex-end;
+      position: relative;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .hp-payment-grid {
+    grid-template-columns: 55% 45%;
+  }
+}
+
+.hp-paper {
+  background: var(--color-slate-100);
+  width: 105px;
+  height: 145px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem;
+  animation: animatePaper forwards 8s infinite;
+  transform-origin: left bottom;
+  transform: rotate3d(1, 1, 1, 0deg);
+  
+  .hp-line {
+    width: 100%;
+    height: 4px;
+    box-shadow: inset 0 0px 0 0 var(--color-grey-400);
+    animation: animateLine 8s infinite;
+    
+    &:nth-child(2) {
+      animation: animateLine2 8s infinite;
+    }
+    
+    &:nth-child(3) {
+      animation: animateLine3 8s infinite;
+    }
+    
+    &:nth-child(4) {
+      animation: animateLine4 8s infinite;
+    }
+    &:nth-child(5) {
+      animation: animateLine5 8s infinite;
+    }
+    &:nth-child(6) {
+      animation: animateLine6 8s infinite;
+    }
+    &:nth-child(7) {
+      animation: animateLine7 8s infinite;
+    }
+    &:nth-child(8) {
+      animation: animateLine8 8s infinite;
+    }
+  }
+}
+
+@keyframes animatePaper {
+    0% {transform: rotate3d(1, 1, 1, 0deg); }
+    50% {transform: rotate3d(1, 1, 1, 0deg); }
+    66% {transform: rotate3d(1, 1, 1, -240deg);}
+    70% {transform: rotate3d(1, 1, 1, -240deg);}
+    100% {transform: rotate3d(1, 1, 1, -360deg);}
+}
+
+@keyframes animateLine {
+  0% {box-shadow: inset 0 0px 0 0 grey; }
+  6.25% {box-shadow: inset 105px 0px 0 0 grey;}
+  52% {box-shadow: inset 105px 0px 0 0 grey;}
+  53% {box-shadow: inset 0 0px 0 0 grey; }
+  100% {box-shadow: inset 0 0px 0 0 grey; }
+}
+
+@keyframes animateLine2 {
+  6.25% {box-shadow: inset 0 0px 0 0 grey; }
+  12.5% {box-shadow: inset 105px 0px 0 0 grey;}
+  52% {box-shadow: inset 105px 0px 0 0 grey;}
+  53% {box-shadow: inset 0 0px 0 0 grey; }
+  100% {box-shadow: inset 0 0px 0 0 grey; }
+}
+
+@keyframes animateLine3 {
+  12.5% {box-shadow: inset 0 0px 0 0 grey; }
+  18.75% {box-shadow: inset 105px 0px 0 0 grey;}
+  52% {box-shadow: inset 105px 0px 0 0 grey;}
+  53% {box-shadow: inset 0 0px 0 0 grey; }
+  100% {box-shadow: inset 0 0px 0 0 grey; }
+}
+
+@keyframes animateLine4 {
+  18.75% {box-shadow: inset 0 0px 0 0 grey; }
+  25% {box-shadow: inset 105px 0px 0 0 grey;}
+  52% {box-shadow: inset 105px 0px 0 0 grey;}
+  53% {box-shadow: inset 0 0px 0 0 grey; }
+  100% {box-shadow: inset 0 0px 0 0 grey; }
+}
+
+@keyframes animateLine5 {
+  25% {box-shadow: inset 0 0px 0 0 grey; }
+  31.25% {box-shadow: inset 105px 0px 0 0 grey;}
+  52% {box-shadow: inset 105px 0px 0 0 grey;}
+  53% {box-shadow: inset 0 0px 0 0 grey; }
+  100% {box-shadow: inset 0 0px 0 0 grey; }
+}
+
+@keyframes animateLine6 {
+  31.25% {box-shadow: inset 0 0px 0 0 grey; }
+  37.5% {box-shadow: inset 105px 0px 0 0 grey;}
+  52% {box-shadow: inset 105px 0px 0 0 grey;}
+  53% {box-shadow: inset 0 0px 0 0 grey; }
+  100% {box-shadow: inset 0 0px 0 0 grey; }
+}
+
+@keyframes animateLine7 {
+  37.5% {box-shadow: inset 0 0px 0 0 grey; }
+  43.75% {box-shadow: inset 105px 0px 0 0 grey;}
+  52% {box-shadow: inset 105px 0px 0 0 grey;}
+  53% {box-shadow: inset 0 0px 0 0 grey; }
+  100% {box-shadow: inset 0 0px 0 0 grey; }
+}
+
+@keyframes animateLine8 {
+  43.75% {box-shadow: inset 0 0px 0 0 grey; }
+  50% {box-shadow: inset 105px 0px 0 0 grey;}
+  52% {box-shadow: inset 105px 0px 0 0 grey;}
+  53% {box-shadow: inset 0 0px 0 0 grey; }
+  100% {box-shadow: inset 0 0px 0 0 grey; }
+}
+
+.hp-btn-payment {
+  display: flex;
+  gap: .5rem;
+  margin-bottom: .75rem;
+  background: transparent;
+  color: var(--color-grey-800);
+  border: 1px solid var(--color-grey-200);
+  flex-direction: row-reverse;
+  align-items: center;
+  font-size: 0.9375rem;
+  line-height: 1.625rem;
+  transition: opacity .15s ease-in, gap .15s ease-in;
+  text-decoration: none;
+  border-radius: .5rem;
+  justify-content: space-between;
+  padding: 1rem 1rem 1rem 2.5rem;
+  position: relative;
+
+  &:before {
+    content: '';
+    position: absolute;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 0 0 0 1px var(--color-grey-600), 0 0 0 3px white inset;
+    left: 1rem;
+  }
+
+    &:hover,
+    &:active,
+    &.hp-active {
+      background: transparent;
+      text-decoration: none;
+      border-color: var(--color-grey-800);
+      color: var(--color-grey-800);
+
+      &:before {
+        background: var(--color-grey-800);
+      }
+    }
+
+    &:focus-visible {
+      box-shadow: 0 0 0 .25rem rgba(#aaa, 0.2);
+    }
+  
+    &:disabled {
+      pointer-events: none;
+      opacity: 0.5;
+    }
+  }
+
+@media(min-width: 768px) {
+  .hp-btn-payment {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: .75rem;
+    line-height: 1em;
+
+    &:before {
+      display: none;
+    }
+  }
+}
+
+.hp-payment-details {
+  position: relative;
+  transition: opacity .3s ease;
+  max-height: 0;
+  opacity: 0;
+  z-index: -1;
+
+  &-inner {
+    padding: 1.25rem 0 2rem;
+  }
+
+  &.hp-active {
+    opacity: 1;
+    max-height: 100%;
+    z-index: 1;
+  }
+
+  &-ideal {
+
+    &.hp-active {
+      min-height: 193px;
+    }
+  }
+
+  &-card {
+
+    &.hp-active {
+      min-height: 288px;
+    }
+  }
+}
+
+.hp-ideal-before-load {
+  min-height: 193px;
+}
+
+.hp-payment-method {
+  border: 1px solid var(--color-grey-200);
+  border-radius: .5rem;
+
+  button {
+    background: transparent;
+    border: 0;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    padding: 1rem;
+    width: 100%;
+    color: var(--color-grey-800);
+
+    img:last-child {
+      margin-right: .5rem;
+    }
+  }
+
+  &-details {
+    display: none;
+    padding: 0 1rem 1rem 1rem;
+  }
+
+  &.hp-active {
+    border: 1px solid var(--color-tertiary);
+    background: rgba(#4C6EF5, 0.05);
+
+
+    button {
+      font-weight: 500;
+      pointer-events: none;
+    }
+
+    .hp-payment-method-details {
+      display: block;
+    }
+  }
+}
+
+@media (min-width: 474px) {
+  .hp-ideal-before-load {
+    min-height: 169px;
+  }
+
+  .hp-payment-details {
+    &-ideal {
+
+      &.hp-active {
+        min-height: 169px;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .hp-ideal-before-load {
+    min-height: 129px;
+  }
+
+
+  .hp-payment-details {
+    position: relative;
+    opacity: 0;
+    overflow: visible;
+
+    &-ideal {
+
+      &.hp-active {
+        min-height: 129px;
+      }
+    }
+
+    &-card {
+
+      &.hp-active {
+        min-height: 258px;
+      }
+    }
+    
+    &-inner {
+      padding: 0 0 .75rem;
+    }
+
+    &-google,
+    &-apple {
+
+      &-inner {
+        padding: 0;
+      }
+    }
+  }
+}
+
+.hp-ideal-select {
+  padding: 0;
+  border: 1px solid var(--color-grey-200);
+  border-radius: 6px;
+  background: #fff;
+
+  &.StripeElement--focus {
+    border-color: var(--color-grey-800);
+
+  }
+}

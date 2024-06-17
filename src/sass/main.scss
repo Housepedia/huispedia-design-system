@@ -1,0 +1,45 @@
+@import
+'base/fonts';
+
+// 1. Configuration and helpers
+@import
+  'abstracts/variables',
+  'abstracts/functions',
+  'abstracts/mixins';
+
+// 2. Vendors
+@import
+  'vendor/bootstrap';
+
+// 3. Base stuff
+@import
+  'base/base',
+  'base/root_colors',
+  'base/typography',
+  'base/helpers',
+  'base/hp-headings',
+  'base/hp-buttons',
+  'base/accordion';
+
+// 4. Layout-related sections
+@import
+  'layout/navbar-new',
+  'layout/search',
+  'layout/footer';
+
+// 5. Components
+@import
+  'components/consent-manager',
+  'components/property-cards',
+  'components/property-list',
+  'components/trustpilot',
+  'components/loaders',
+  'components/sweet-alert';
+
+// 7. Themes
+@import
+  'themes/default';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

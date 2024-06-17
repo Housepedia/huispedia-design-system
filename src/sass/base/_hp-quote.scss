@@ -1,0 +1,30 @@
+.hp-quote-mini-image {
+  flex-basis: 5rem;
+  width: 5rem;
+  height: 5rem;
+}
+
+.hp-quote-mini {
+
+  blockquote {
+    font-size: 1rem;
+  }
+
+  &-image {
+    flex-basis: 5rem;
+    width: 5rem;
+    height: 5rem;
+  }
+
+  &-author {
+    font-size: .875rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .hp-quote-mini-image {
+    flex-basis: 7.5rem;
+    width: 7.5rem;
+    height: 7.5rem;
+  }
+}

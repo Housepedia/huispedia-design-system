@@ -1,0 +1,78 @@
+@import '../abstracts/hp-colors';
+
+.hp-tabs {
+  display: flex;
+  gap: .75rem;
+  border-bottom: .25rem solid var(--color-slate-100);
+
+  button,
+  a {
+    border: 0;
+    background: transparent;
+    padding: .25rem .5rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    position: relative;
+    color: var(--color-grey-800);
+
+    &:after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 100%;
+      height: 4px;
+      width: 0;
+      border-radius: 2px;
+      background: transparent;
+      transition: ease-in-out all .3s;
+      transform-origin: center bottom;
+    }
+
+    &.hp-active,
+    &:hover {
+
+      &:after {
+        background: linear-gradient(
+    90deg, #8c3ce0 0%, #eb25d7 48.92%, #f17494 100%);
+        width: 100%;
+      }
+    }
+  }
+}
+
+.hp-tabs-desktop {
+  @extend .hp-tabs;
+  display: none;
+}
+
+@media (min-width: 992px) {
+  .hp-tabs {
+    gap: 1.5rem;
+
+    button,
+    a {
+      font-size: 1rem;
+      padding: .5rem 1rem;
+    }
+  }
+
+  .hp-tabs-lg {
+    button,
+    a {
+      font-size: 1.125rem;
+    }
+  }
+
+  .hp-tabs-desktop {
+    display: flex;
+    align-items: flex-end;
+    gap: 1rem;
+
+    button,
+    a {
+      font-size: 0.925rem;
+      text-decoration: none;
+    }
+  }
+}

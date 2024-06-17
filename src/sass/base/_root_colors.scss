@@ -1,0 +1,42 @@
+// Root variables
+:root {
+  --color-primary: #FF385C;						// Primary: Buttons, visuals
+  --color-primary-dark: #FF0532;
+  --color-primary-light: #FF607D;			// Primary light: Review stars, Verified icon, Visuals
+  --color-secondary: #25315a;					// Secondary: Background banner
+  --color-secondary-light: #E9EAEE;
+  --color-tertiary: #4c6ef5;						// Tertiary: label
+
+  --color-kp: #6F73D2;                        // HuispediaPlus
+  --color-kp-dark: rgba(70, 72, 139, 1);      // HuispediaPlus dark
+  --color-kp-dark-90: rgba(70, 72, 139, 0.9); // HuispediaPlus dark tint 90%
+  --color-kp-5: rgba(111, 115, 210, 0.05);    // HuispediaPlus tint 5%
+  --color-kp-10: rgba(111, 115, 210, 0.10);   // HuispediaPlus tint 5%
+
+  --color-slate-700: #B7C1D2;					// Graphics, visuals
+  --color-slate-500: #E9ECF1;					// Darker background
+  --color-slate-200: #f9f8fc; // TO REMOVE
+  --color-slate-100: #F6F8F9;					// Background
+
+  --color-grey-800: #444; 							// Button dark, Icons, Body text
+  --color-grey-600: #777; 							// Input placeholders
+  --color-grey-400: #AAA; 							// Icons
+  --color-grey-200: #ddd; 							// Borders, ghost button, divider lines
+  --color-grey-100: #eee; // TO REMOVE
+  --color-grey-50: #f8f8f8; // TO REMOVE
+
+  --color-blue: var(--color-tertiary);  // For sale
+  --color-purple: #9c68ff;							// For rent
+  --color-green: #2FCA87; 							// Available soon
+  --color-yellow: #f7b503; 						// Only good offers
+  --color-grey: var(--color-grey-400); 	 // Not available
+  --color-red: #EE2B3B; 								// Sold, Rented
+
+  --color-success: var(--color-green);
+  --color-warning: var(--color-yellow);
+  --color-error: var(--color-red);
+
+  --color-text-base: var(--color-grey-800);
+
+  --font-family-base:  'poppins', sans-serif;
+}

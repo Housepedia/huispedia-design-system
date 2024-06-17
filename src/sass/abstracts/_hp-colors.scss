@@ -1,0 +1,32 @@
+// Please do not use, use var(--color-[insert_color]) instead. The colors are in abstracts/variables
+
+// Base colors
+$color-primary: #FF385C;
+
+// Content
+
+$color-greyblue: #B7C1D2;
+$color-medium: #E9ECF1;
+
+// Shades of grey
+$color-grey-900: #333;
+$color-grey-600: #777;
+$color-grey-400: #AAA;
+$color-grey-200: #ddd;
+$color-grey-100: #eee; // TO
+$color-grey-50: #f8f8f8;
+
+// labels
+$color-blue : var(--color-tertiary);
+$color-purple : #9c68ff;
+$color-green : #90c40e;
+$color-yellow : #f7b503;
+$color-grey : $color-grey-400;
+$color-pink: var(--color-primary);
+
+// Validation
+$color-success: $color-green;
+$color-almost-success: #C3BC08;
+$color-warning: $color-yellow;
+$color-almost-warning: #FB762F;
+$color-error: #EE2B3B;

@@ -1,0 +1,58 @@
+#compareRealtorsMain{
+  section{
+
+    transition: all 0.4s;
+
+    &.slideUp{
+      max-height:0;
+      padding:0!important;
+      height:0;
+      overflow: hidden;
+      opacity: 0;
+      pointer-events: none;
+    }
+  }
+  section.info-section{
+    transition: all 0.4s;
+  }
+
+}
+
+@media (max-width: 992px) {
+  #compareRealtorsMain{
+
+    section.info-section{
+      padding-top: 3rem;
+      padding-bottom: 3rem;
+    }
+  }
+}
+
+#compareRealtorsContainer{
+  min-height: 350px;
+}
+
+@media (min-width: 768px) {
+  #compareRealtorsContainer{
+    min-height: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hp-wizard-active {
+
+    #navbar {
+      border-bottom: 1px solid #ddd!important;
+    }
+
+    #compareRealtorsMain {
+
+      > *:nth-child(1n + 3) {
+        padding:0 !important;
+        height:0;
+        opacity: 0;
+        overflow: hidden;
+      }
+    }
+  }
+}

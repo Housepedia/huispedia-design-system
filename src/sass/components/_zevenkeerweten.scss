@@ -1,0 +1,12 @@
+.hp-zkw-aside {
+  inset: 0;
+  position: absolute;
+  opacity: 0;
+  transition: ease-out all .3s;
+  pointer-events: none;
+
+  &.hp-active {
+    opacity: 1;
+    pointer-events: all;
+  }
+}

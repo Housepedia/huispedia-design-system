@@ -1,0 +1,18 @@
+.p-toast {
+
+  .p-toast-message {
+
+    .p-toast-icon-close {
+      font-family: "Font Awesome 6 Pro"!important;
+      font-weight: 300;
+  
+      &:before {
+        content: "\f00d"!important;
+      }
+
+      span {
+        display: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,51 @@
+.hp-sticker-bidding {
+  background: var(--color-secondary);
+  position: relative;
+  overflow: hidden;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  gap: 1.5rem;
+  border-radius: .625rem;
+  cursor: pointer;
+  font-family: 'Poppins';
+  > * {
+    position: relative;
+    z-index: 1;
+    color: #fff;
+  }
+  &:after {
+    content: '';
+    position: absolute;
+    background: #354270;
+    transform: rotate(35deg) translatey(130%);
+    inset: 0;
+    z-index: 0;
+    transition: ease all .3s;
+  }
+  &:hover {
+    color:#fff;
+    img {
+      transform: scale(1.1);
+    }
+
+    &:after {
+      transform: rotate(35deg) translatey(-120%);
+    }
+  }
+
+  p {
+    border-left: 1px solid rgba(255,255,255,0.5);
+    padding-left: 1rem;
+  }
+
+  img {
+    height: 2.5rem;
+    transition: ease all .3s;
+  }
+
+  i {
+    margin-left: auto;
+  }
+}

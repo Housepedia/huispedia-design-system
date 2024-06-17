@@ -1,0 +1,112 @@
+.hp-card-category {
+  border: 1px solid var(--color-grey-200);
+  border-radius: .5rem;
+  text-decoration: none;
+  transition: all .3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 1.5rem;
+
+  figure {
+    background: var(--color-slate-100);
+  }
+
+  svg {
+    height: 1.5rem;
+    fill: var(--color-primary);
+    margin-bottom: 1.25rem;
+  }
+  
+  .hp-category-icon {
+    font-size: 1.5rem;
+    color: var(--color-primary);
+    margin-bottom: 1.25rem;
+  }
+
+  .hp-category-svg {
+    fill: var(--color-primary);
+    height: 1.5rem;
+    margin-bottom: 1.25rem;
+  }
+
+  p:not(:last-child) {
+    margin-bottom: 2rem;
+  }
+
+  .hp-more-link {
+    display: flex;
+    gap: .75rem;
+    margin-top: auto;
+    transition: color .3s ease;
+
+    i {
+      margin-top: .375rem;
+      font-size: .75rem;
+    }
+  }
+
+  &:hover {
+    text-decoration: none;
+    color: var(--color-grey-800);
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.05), 0px 8px 32px rgba(0, 0, 0, 0.05);
+
+    .hp-more-link {
+      color: var(--color-primary);
+    }
+  }
+}
+
+.hp-card-category-shadow {
+
+  background: #fff;
+  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.05), 0px 8px 32px rgba(0, 0, 0, 0.05);
+  transition: ease all .3s;
+  display: grid;
+  align-items: center;
+  grid-template-areas: "A C" "B C";
+
+  column-gap: .5rem;
+  text-decoration: none;
+  padding: 1.5rem;
+  border-radius: .5rem;
+
+  h3 {
+    transition: all .3s ease;
+  }
+
+  > :nth-child(1) {
+    grid-area: A;
+    display: flex;
+    align-content: flex-end;
+
+    align-self: flex-end;
+  }
+
+  > :nth-child(2) {
+    grid-area: B;
+    align-self: flex-start;
+  }
+
+  > :nth-child(3) {
+    grid-area: C;
+  }
+
+  svg {
+    width: 100%;
+    max-width: 73px;
+    margin-bottom: 0;
+    justify-self: flex-end;
+  }
+
+  &:hover {
+    color: var(--color-grey-800);
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1), 0px 8px 28px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+
+    h3 {
+      color: var(--color-primary);
+    }
+  }
+}

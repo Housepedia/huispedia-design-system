@@ -1,0 +1,48 @@
+#propertyNavAffix{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 1200;
+  background: #FFF;
+  box-shadow: 0 0 8px 0 rgba(0,0,0,0.15);
+  transition: transform 0.25s ease-out;
+  will-change: transorm;
+  transform: translate3d(0,-110px,0);
+  &.affix{
+    transform: translate3d(0,0,0);
+  }
+}
+body {
+  &.scroll-disabled{
+    #propertyNavAffix{
+      padding-right: 17px;
+    }
+  }
+  &.swal2-shown, &.p-overflow-hidden {
+    #propertyNavAffix{
+      padding-right: 27px;
+    }
+  }
+}
+@media (max-width: 768px) {
+  #propertyNavAffix{
+    bottom:0;
+    top:auto;
+    transform: translate3d(0,110px,0);
+    box-shadow: rgb(0 0 0 / 10%) 0px -1px 10px 0px;
+  }
+  body {
+    &.scroll-disabled{
+      #propertyNavAffix{
+        padding-right: 0;
+      }
+    }
+    &.swal2-shown, &.p-overflow-hidden {
+      #propertyNavAffix{
+        padding-right: 0;
+      }
+    }
+  }
+}

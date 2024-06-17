@@ -1,0 +1,30 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to pages not covered in in the main or page specific css files
+// -----------------------------------------------------------------------------
+
+// 1. Configuration and helpers
+@import
+  'abstracts/variables',
+  'abstracts/functions',
+  'abstracts/mixins';
+
+// 2. Components
+@import
+  'components/accordion',
+  'components/blockquote',
+  'components/more_services_overview',
+  'layout/header_promo_pages',
+  'base/hp-swiper',
+  'components/review_carousel';
+
+// 3. legacy files, to be removed later if all items are components...
+@import
+  'pages/promo/app-promo-pages';
+
+// 4. pages
+@import
+'pages/compare_realtors',
+'pages/advertisement',
+'pages/mortgage_leads',
+'pages/for_realtors';
+

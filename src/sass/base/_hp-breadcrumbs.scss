@@ -1,0 +1,31 @@
+  // breadcrumbs
+  .hp-breadcrumbs {
+    display: none;
+    gap: 1rem;
+
+    &-crumb {
+      display: flex;
+      gap: 1rem;
+    }
+
+    i {
+      font-size: .5rem;
+      margin-top: .55rem;
+    }
+
+    a {
+      font-weight: 500;
+      text-decoration: none;
+
+      &:hover,
+      &:focus {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  @media (min-width: 992px) {
+    .hp-breadcrumbs {
+      display: flex;
+    }
+  }

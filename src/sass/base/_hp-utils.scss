@@ -1,0 +1,243 @@
+@import '../abstracts/hp-colors';
+
+// Backlink
+.hp-back-link {
+  border: 0;
+  background: transparent;
+  display: flex;
+  align-items: flex-start;
+  gap: .5rem;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0;
+
+  i {
+    margin-top: .425rem;
+    font-size: .625rem;
+  }
+
+  span {
+    transition: ease-out 0.2s all;
+  }
+
+  &:hover {
+    text-decoration: none;
+
+    span {
+      transform: translateX(0.25rem);
+    }
+  }
+}
+
+// Link with arrow on the right
+.hp-arrow-link {
+  display: flex;
+  gap: .75rem;
+  line-height: 1.25em;
+  transition: ease-out .2s all;
+  text-decoration: none;
+
+  &.router-link-active {
+    font-weight: 500;
+  }
+
+  &:hover {
+    text-decoration: none;
+
+    span {
+      text-decoration: underline;
+    }
+  }
+
+  i {
+    margin-top: 7px;
+    font-size: .5rem;
+    transition: ease-out .2s all;
+  }
+}
+
+// Divider
+.hp-divider-v {
+  border-right: 1px solid $color-grey-100;
+}
+
+@media (min-width: 768px) {
+  .md\:hp-divider-v {
+    border-right: 1px solid $color-grey-100;
+  }
+}
+
+// Dashed box
+.hp-dashed-box {
+  align-items: center;
+  border: .25rem dashed $color-grey-200;
+  border-radius: .75rem;
+  display: flex;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  text-align: center;
+  justify-content: center;
+  padding: 1.25rem;
+
+  img {
+    max-width: 100%;
+    max-height: 100%;
+    margin: 0;
+  }
+
+  figure {
+    margin: 0;
+  }
+}
+
+.hp-responsive-square {
+width: 100%;
+aspect-ratio: 1;
+}
+
+// Remove item button (X verwijderen)
+.hp-remove-item {
+font-size: .75rem;
+border: 0;
+-webkit-appearance: none;
+background: transparent;
+padding: 0;
+display: flex;
+align-items: center;
+gap: .25rem;
+color: $color-grey-400;
+transition: ease all .2s;
+margin-top: auto;
+
+&:hover {
+  color: var(--color-primary);
+
+  .fa-times {
+    margin-right: .125rem;
+  }
+}
+
+.fa-times {
+  font-size: .75rem;
+  transition: ease all .2s;
+  transform: translateY(1px);
+}
+}
+
+.hp-indicator-list {
+display: flex;
+justify-content: center;
+gap: .5rem;
+padding: 0;
+margin: 0;
+
+.hp-indicator {
+  list-style: none;
+  width: .5rem;
+  height: .5rem;
+  display: inline-block;
+  border-radius: 50%;
+  background: rgba(0,0,0,0.2);
+
+
+  &.hp-active {
+    background: var(--color-tertiary);
+  }
+}
+}
+
+.hp-properties-list-icons {
+display: grid;
+grid-template-columns: auto 1fr;
+gap: .5rem;
+
+dd,
+dt {
+  margin-bottom: 0;
+}
+
+i {
+  font-size: 1rem;
+}
+}
+
+.hp-property-summary {
+display: flex;
+gap: .75rem;
+
+.hp-img-square {
+
+  img {
+    width: 85px;
+    height: 85px;
+    object-fit: cover;
+    object-position: center center;
+    border-radius: .25rem;
+  }
+}
+}
+
+.hp-blurred-placeholder {
+  color: var(--color-kp);
+  position: relative;
+  span {
+    filter: blur(4px);
+    opacity: 0.6;
+    user-select: none;
+  }
+  i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+
+// Light color panel right bg
+
+@media(min-width: 992px) {
+.hp-panel-right-light {
+  box-shadow: calc(-50vw + 12rem) 0 0 var(--color-slate-100) inset;
+}
+}
+
+.hp-data-logos {
+
+.kadaster {
+  width: 45px;
+}
+
+.cbs {
+  width: 90px;
+}
+
+.maps {
+  width: 41px;
+}
+
+.rijksdienst {
+  width: 70px;
+}
+}
+
+@media (min-width: 1024px) {
+.hp-data-logos {
+
+  .kadaster {
+    width: 85px;
+  }
+
+  .cbs {
+    width: 135px;
+  }
+
+  .maps {
+    width: 61px;
+  }
+
+  .rijksdienst {
+    width: 103px;
+  }
+}
+}

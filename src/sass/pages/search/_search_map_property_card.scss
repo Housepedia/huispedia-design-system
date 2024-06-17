@@ -1,0 +1,380 @@
+$card-corner-radius : 10px;
+#propertiesMapViewer{
+  position: absolute;
+  bottom:2px;
+  left:0;
+  right:0;
+  height:200px;
+  width: 400px;
+  max-width: 100%;
+  margin:0 auto;
+  z-index: 10;
+  &.large{
+    width: 570px;
+    height:150px;
+  }
+  .propertiesMapViewerControls{
+    position: absolute;
+    top:-28px;
+    left:12px;
+    right:12px;
+    .close-button{
+      padding:0;
+      box-shadow: 0 2px 5px 0 rgba(0,0,0,.25);
+      border:none;
+      box-sizing: border-box;
+      outline: none;
+      height: 32px;
+      width: 32px;
+      line-height: 32px;
+      text-align: center;
+      border-radius: 50%;
+      background: #fff;
+      color: #475a6b;
+      float: right;
+      &:hover{
+        background-color: #dfe8ee;
+        color: #3c515b;
+      }
+    }
+    .prev-next-controls{
+      box-sizing: border-box;
+      box-shadow: 0 2px 5px 0 rgba(0,0,0,.25);
+
+      font-size: 14px;
+      line-height: 32px;
+      height: 32px;
+      font-weight: 400;
+      color: #475a6b;
+      border-radius: 24px;
+      background-color: #fff;
+      overflow: hidden;
+      span{
+        border-left:1px solid #e9ecf1;
+        border-right:1px solid #e9ecf1;
+        display: inline-block;
+        line-height: 32px;
+        padding:0 5px;
+        float: left;
+      }
+      button{
+        width: 24px;
+        line-height: 30px;
+        text-align: center;
+        outline: none;
+        border:none;
+        background: none;
+        color: #475a6b;
+        float: left;
+        &:hover{
+          background-color: #dfe8ee;
+          color: #3c515b;
+        }
+      }
+    }
+  }
+  .slider-wrapper{
+    margin:0 !important;
+    .slider-item{
+      margin:0 12px !important;
+    }
+  }
+}
+
+article.hsp-map-photo-card{
+  color: var(--color-primary);
+  position: relative;
+  display:block;
+  border-radius: $card-corner-radius;
+  background: #FFF;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+  overflow: hidden;
+  width: 100%;
+  height:100%;
+  a,.property-card__container{
+    display:block;
+    color:#FFF;
+    height:100%;
+  }
+  .card-user-actions{
+    float:right;
+    margin: -15px -10px 0 0;
+    button.card-action{
+      background: none;
+      padding:15px;
+      margin:0;
+      outline: none;
+      border:none;
+      width: auto;
+      color: #fff;
+      font-size:24px;
+      cursor: pointer;
+      display: inline-block;
+      transition: color 0.2s ease-in;
+      i{
+        vertical-align: top;
+        margin:0;
+      }
+      &:hover{
+        color: var(--color-primary) !important;
+      }
+      &.follow-prop-btn{
+        .icon-following{
+          display: none;
+        }
+        text-shadow: 0 2px 5px rgba(0,0,0,0.3);
+        &.state-following{
+          color: var(--color-primary) !important;
+          text-shadow: none;
+          .icon-not-following{
+            display: none;
+          }
+          .icon-following{
+            display: inline-block;
+          }
+        }
+      }
+    }
+  }
+  .hsp-card-photo{
+    position: relative;
+    width:100%;
+    height:100%;
+    .top-content{
+      position: absolute;
+      top:15px;
+      left:15px;
+      right:10px;
+      z-index: 5;
+      .content-item{
+        text-transform: uppercase;
+        border-radius: 11px;
+        line-height: 22px;
+        height: 22px;
+        padding: 0 8px;
+        margin: 0 5px 0 0;
+        font-size: 12px;
+        font-weight: 600;
+        letter-spacing: 0.2px;
+        color: #FFF;
+        background: var(--color-primary);
+        float: left;
+        &.content-item-new{
+          background: var(--color-tertiary);
+        }
+        &.content-item-open-house{
+          background:rgba(33,33,33,0.6);
+        }
+        &.content-item-open-bid{
+          background: linear-gradient(270deg, #f07293 0%, #eb2cd4 50.64%, #863ce0 100%);
+        }
+      }
+
+    }
+    .hsp-photo-card-img{
+      background: var(--color-slate-100);
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      position: absolute;
+      overflow: hidden;
+      top: 0;
+      right: 0;
+      border-radius: $card-corner-radius;
+      img{
+        height:100%;
+        width:100%;
+        display: block;
+        object-fit: cover;
+        overflow: hidden;
+      }
+      &:after{
+        background-image: linear-gradient(180deg,transparent,rgba(0,0,0,0.7));
+        position: absolute;
+        left: 0;
+        top: 25%;
+        right: 0;
+        bottom: 0;
+        content: "";
+      }
+    }
+    .bottom-content{
+      position: absolute;
+      width: 100%;
+      z-index: 5;
+      left: 0;
+      bottom: 0;
+      padding: 0 15px;
+      background: rgba(var(--color-grey-800),0.5);
+      .user-info{
+        width: 100%;
+        position: relative;
+        .hsp-photo-card-user{
+          border-radius: 50%;
+          overflow: hidden;
+          background: var(--color-slate-100);
+          width: 40px;
+          height: 40px;
+          display: inline-block;
+          position: absolute;
+          bottom:-20px;
+          right:0;
+          border: 1px solid #fff;
+          img{
+            width:100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+            overflow:hidden;
+            display: block;
+          }
+        }
+        .title{
+          font-size: 14px;
+          font-weight: 600;
+          line-height: 34px;
+          text-align: left;
+          color: #ffffff;
+          display: block;
+          vertical-align: top;
+        }
+      }
+      .time-ago{
+        width:30%;
+        display:none;
+        float: right;
+        text-align: right;
+        color:#FFF;
+        font-size:12px;
+        line-height: 38px;
+        font-weight: 600;
+      }
+    }
+  }
+  .hsp-card-specs{
+    position: absolute;
+    bottom:0;
+    left:0;
+    z-index: 10;
+    right:0;
+    width:100%;
+    text-align: left;
+    text-shadow:none;
+    height: 110px;
+    overflow: hidden;
+    color: var(--color-grey-800);
+    font-size:16px;
+    padding: 15px;
+    border-bottom-right-radius: $card-corner-radius;
+    border-bottom-left-radius: $card-corner-radius;
+    border:none;
+    .card-user-actions{
+      position: absolute;
+      top:15px;
+      right:5px;
+      button.card-action{
+        color:#ccc;
+        text-shadow: none !important;
+      }
+    }
+    .hsp-photo-card-address{
+      font-size: .9125rem;
+      line-height: 26px;
+      font-weight: 500;
+      color:#FFF;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: block;
+      width:100%;
+    }
+    .hsp-card-spec-details{
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display:inline-block;
+      clear: left;
+      float: left;
+      width:100%;
+      color: rgba(255,255,255,0.9);
+      .detail-item{
+        font-size: 14px;
+        line-height: 22px;
+        display:inline;
+        margin-right:4px;
+        &:last-child{
+          margin-right:0;
+        }
+      }
+      .detail-item:not(:first-of-type):before {
+        font-size: 4px;
+        margin: -1px 6px 0 1px;
+        color: rgba(255,255,255,0.9);
+        display: inline-block;
+        vertical-align: middle;
+        content: "\2b24";
+      }
+    }
+    .hsp-card-specs-bottom{
+      overflow: auto;
+      width: 100%;
+      margin-top: 2px;
+      float: left;
+      .hsp-card-price{
+        color:#fff;
+        font-size:1rem;
+        line-height: 28px;
+        height:30px;
+        display: inline-block;
+        font-weight: 600;
+        float:left;
+        small{
+          font-weight: 600;
+        }
+        &.text-line-through{
+          text-decoration: line-through;
+        }
+      }
+    }
+  }
+  .hsp-card-admin{
+    display: none;
+  }
+  &.large{
+    a{
+      display: flex;
+    }
+    .hsp-card-photo{
+      position: relative;
+      flex: 0 0 230px;
+      .hsp-photo-card-img{
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+      }
+    }
+    .hsp-card-specs {
+      position: relative;
+      height: auto;
+
+      .hsp-photo-card-address {
+        color: var(--color-grey-800);
+        padding-right: 30px
+      }
+      .hsp-card-spec-details {
+        color: var(--color-grey-800);
+        .detail-item:not(:first-of-type):before {
+          color: var(--color-grey-800);
+        }
+      }
+      .hsp-card-specs-bottom .hsp-card-price {
+        color: var(--color-grey-800);
+      }
+      .hsp-card-admin{
+        display: block;
+        font-size:14px;
+        color: var(--color-grey-600);
+        float:left;
+      }
+    }
+  }
+}

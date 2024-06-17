@@ -1,0 +1,80 @@
+@import 
+"../../abstracts/hp-colors",
+"../../base/hp-buttons",
+"../../base/hp-inputs",
+"../../base/hp-toast",
+"../../base/hp-loading",
+"../../base/hp-modal",
+"../../base/hp-utils",
+'../../base/hp-swiper',
+'../../base/hp-quote';
+
+.hp-homevalue-widget {
+  position: relative;
+  z-index: 10;
+  background: #fff;
+  padding: 1.5rem;
+  text-align: left;
+  border-radius: .5rem;
+  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.2); 
+  
+  &-list {
+    min-height: 203px;
+  }
+
+  &-postcode {
+    min-height: 356px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hp-homevalue-widget {
+    padding: 2rem;
+    margin: 0;
+    transition: ease margin .2s;
+  }
+}
+
+.hp-spinner {
+  animation: rotation .8s infinite linear;
+  transform-origin: center;
+  width: 1rem;
+}
+
+@keyframes p-progress-spinner-color {
+
+  100%,
+  0% {
+    stroke: var(--color-primary);
+  }
+
+  40% {
+    stroke: #f07293;
+  }
+
+  66% {
+    stroke: #eb2cd4;
+  }
+
+  80%,
+  90% {
+    stroke: #863ce0;
+  }
+}
+
+@keyframes rotation {
+
+0% {
+  transform: rotate(0deg);
+  fill: var(--color-primary);
+}
+
+50% {
+  fill: var(--color-secondary);
+}
+
+100% {
+  transform: rotate(360deg);
+  fill: var(--color-primary);
+}
+}

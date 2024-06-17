@@ -1,0 +1,65 @@
+@import '../abstracts//hp-colors';
+
+.hp-pagination {
+
+  &.p-paginator,
+  .p-paginator {
+
+    .p-paginator-next,
+    .p-paginator-prev {
+      font-family: "Font Awesome 5 Pro";
+      font-size: .75rem;
+      border-radius: 50%;
+
+      span {
+        display: none;
+      }
+
+      &:not(.p-disabled):not(.p-highlight):hover,
+      &:hover {
+        background: rgba(#25315A, .05);
+      }
+    }
+
+    .p-paginator-prev {
+
+      &:before{
+        content: '\f053';
+      }
+    }
+
+    .p-paginator-next {
+
+      &:before{
+        content: '\f054';
+      }
+    }
+
+    .p-paginator-pages {
+
+
+      .p-paginator-page {
+
+        &.p-link {
+          color: var(--color-grey-800);
+          border-radius: 50%;
+          font-family: "Poppins", sans-serif;
+
+          &:hover {
+            background: rgba(var(--color-tertiary), .05);
+            color: var(--color-secondary);
+          }
+
+          &:focus {
+            box-shadow: 0 0 0 0.125rem var(--color-tertiary);
+          }
+        }
+
+        &.p-highlight {
+          background: var(--color-secondary);
+          color: #fff;
+        }
+      }
+    }
+  } 
+}

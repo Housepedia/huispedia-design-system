@@ -1,0 +1,135 @@
+@import '../components/zevenkeerweten';
+
+.hp-timeline-about {
+  display: grid;
+  gap: 1.5rem;
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+
+  &:before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    border-left: 2px dashed var(--color-grey-200);
+    left: 1.5rem;
+    top: 0;
+    transform: translateX(1px);
+  }
+
+  &.hp-closed {
+    height: 400px!important;
+
+    &:after {
+      content: '';
+      position: absolute;
+      height: 200px;
+      width: 100%;
+      bottom: 0;
+      left: 0;
+      background: linear-gradient(rgba(255,255,255,0), rgba(255,255,255,1));
+      z-index: 1;
+    }
+  }
+
+  &-item {
+    display: flex;
+    position: relative;
+    gap: 1.5rem;
+
+    &:first-child {
+
+      &:before {
+        content: '';
+        position: absolute;
+        background: #fff;
+        height: .5rem;
+        width: 3rem;
+        top: 0;
+      }
+    }
+
+    &:last-child {
+      padding-bottom: 0;
+
+      &:after {
+        content: '';
+        position: absolute;
+        background: #fff;
+        height: calc(100% - 2rem);
+        width: 3rem;
+        bottom: 0;
+      }
+    }
+
+
+    i {
+      position: relative;
+      z-index: 1;
+      background: var(--color-slate-100);
+      border: .25rem solid #fff;
+      width: 3.375rem;
+      height: 3.375rem;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-shrink: 0;
+      z-index: 1;
+      margin-top: .5rem;
+      font-size: 21px;
+    }
+  }
+
+  &-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    span:nth-child(1) {
+      font-size: .75rem;
+      color: var(--color-grey-600);
+      margin-bottom: .125rem;
+      line-height: 22.5px;
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .hp-timeline-about {
+    gap: 2.25rem;
+  }
+}
+
+.hp-bg-blob {
+  background: url(/img/pages/home/blob.svg);
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+
+.hp-bg-blob-white {
+  background: url(/img/pages/about-us/blob-white.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+
+.hp-photo-property {
+  max-width: calc(100% - 2.25rem);
+  border-radius: .5rem;
+  margin-right: 2.25rem;
+}
+
+@media (min-width: 992px) {
+  .hp-photo-property {
+    max-width: 395px;
+    margin-right: 3rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .hp-zkw-accordion {
+    min-height: 727px;
+  }
+}

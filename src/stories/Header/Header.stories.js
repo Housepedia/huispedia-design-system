@@ -1,15 +1,15 @@
 import { fn } from '@storybook/test';
-import MyHeader from './Header.vue';
+import Header from './Header.vue';
 
 export default {
   title: 'Example/Header',
-  component: MyHeader,
+  component: Header,
   // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/writing-docs/autodocs
   tags: ['autodocs'],
   render: (args) => ({
     // Components used in your story `template` are defined in the `components` object
     components: {
-      MyHeader,
+      Header,
     },
     // The story's `args` need to be mapped into the template through the `setup()` method
     setup() {
@@ -19,7 +19,7 @@ export default {
       };
     },
     // Then, the spread values can be accessed directly in the template
-    template: '<my-header :user="user" />',
+    template: '<header :user="user" />',
   }),
   parameters: {
     // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout

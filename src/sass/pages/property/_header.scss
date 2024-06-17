@@ -1,0 +1,118 @@
+$header-max-width: 1200px;
+nav#propertyHeaderNav{
+  line-height: 52px;
+  max-height: 52px;
+  overflow: hidden;
+  transition: max-height 0.3s;
+  .svg-icon{
+    width: 14px;
+    height: 14px;
+  }
+  .share-save-container{
+    display: inline-block;
+    float:right;
+    button{
+      border:none;
+      background: none;
+      outline: none;
+      padding:0;
+      color: var(--color-grey-800);
+      text-decoration: none;
+      svg{
+        fill:var(--color-grey-800);
+        margin-right: 8px;
+      }
+      &:hover{
+        color: var(--color-primary);
+        svg{
+          fill: var(--color-primary);
+        }
+      }
+      &.follow-prop-btn{
+        .icon-following, .text-following{
+          display: none;
+        }
+        &.state-following{
+          color: var(--color-primary);
+          svg{
+            fill: var(--color-primary);
+          }
+          .icon-not-following, .text-not-following{
+            display: none;
+          }
+          .icon-following, .text-following{
+            display: inline-block;
+          }
+        }
+      }
+    }
+  }
+}
+header#propertyHeader{
+  position: relative;
+  max-width: $header-max-width;
+  min-height: 300px;
+  height:calc(100vh - 400px);
+  max-height: 480px;
+  margin:0 auto 33px auto;
+  border-radius: 10px;
+  background: #f8f8f8;
+  transition: min-height 0.3s, height 0.3s;
+  &:before{
+    content: "";
+    display: block;
+    width: 100%;
+    padding-top: 40%;
+  }
+  #v-property-header{
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height:100%;
+  }
+}
+
+body.header-banner-active{
+  header#propertyHeader {
+     min-height:450px;
+  }
+  nav#propertyHeaderNav{
+  //  max-height: 0;
+  }
+}
+@media (max-width: $header-max-width) {
+  header#propertyHeader{
+    border-radius: 0;
+
+  }
+}
+@media (max-width: 767px) {
+  header#propertyHeader{
+    min-height: 270px;
+    height: 270px;
+    max-height: 270px;
+    background-size: 25%;
+    #v-property-header{
+      transition: none;
+      height: 270px;
+    }
+  }
+  body.header-banner-active{
+    header#propertyHeader {
+      min-height: 270px;
+      height: 270px;
+      max-height: 270px;
+      #v-property-header{
+        position: fixed;
+        overflow: hidden;
+        height: calc(100vh - 56px);
+        top: 56px;
+        left: 0;
+        z-index: 100;
+        bottom: 0;
+        right: 0;
+      }
+    }
+  }
+}
